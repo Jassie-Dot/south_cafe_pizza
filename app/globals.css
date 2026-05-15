@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --header-height: 84px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fffaf2;
+  color: #24211d;
+  font-size: 18px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  user-select: none;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #216e82;
+  outline-offset: 4px;
+}
+
+::selection {
+  background: #216e82;
+  color: #fffaf2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-kicker {
+    @apply text-sm font-bold uppercase text-ocean;
+  }
+
+  .section-title {
+    @apply mt-3 max-w-3xl font-display text-4xl font-bold leading-tight text-charcoal md:text-5xl;
+  }
+
+  .section-copy {
+    @apply mt-5 max-w-3xl text-xl leading-relaxed text-charcoal/75;
+  }
+
+  .card {
+    @apply rounded-lg border border-charcoal/10 bg-white shadow-soft transition-shadow duration-300;
+  }
+
+  .card:hover {
+    box-shadow: 0 22px 55px rgba(36, 33, 29, 0.16);
+  }
+
+  .tap-target {
+    @apply min-h-12 min-w-12;
+  }
+}
