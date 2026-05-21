@@ -1,0 +1,2065 @@
+{
+  "hero": {
+    "headline": "South Pizza in Port Elgin",
+    "subheadline": "Stone-baked pizzas, Indian-inspired favourites, sides, ice cream, and cold drinks for beach days, family takeout, and easy local dinners.",
+    "tabKicker": "Order, browse, or plan your visit",
+    "tabHeadline": "Everything you need, right where you need it."
+  },
+  "topDeals": [
+    {
+      "eyebrow": "Top Deal",
+      "title": "Beach Day Pizza Combo",
+      "price": "From $24.99",
+      "description": "A customer-friendly combo with a hot pizza, garlic bread, and cold drinks for an easy beach-day meal.",
+      "image": "/uploads/af0d71ff-caad-4a48-975a-d022902bcd5a.jpg"
+    },
+    {
+      "eyebrow": "Family Favourite",
+      "title": "Family Takeout Night",
+      "price": "Order Online",
+      "description": "Build a larger order with pizza, fries, sides, and a 2L drink for the whole table.",
+      "image": "/uploads/165f1a17-d804-4500-b988-9070c4027a08.jpg"
+    },
+    {
+      "eyebrow": "Lunch Pick",
+      "title": "Quick Slice & Drink",
+      "price": "Ask Today",
+      "description": "A simple lunch stop for locals, seniors, and visitors who want clear choices and fast service.",
+      "image": "/uploads/south-pizza-photo-03.jpg"
+    }
+  ],
+  "specials": [
+    {
+      "title": "Daily Pizza Feature",
+      "price": "from $14.99",
+      "description": "Rotating house pizzas such as Tandoori Paneer, Spicy Butter Paneer, Greek, and Margherita.",
+      "tag": "Daily"
+    },
+    {
+      "title": "Beach Lunch Combo",
+      "price": "Ask today",
+      "description": "A quick lunch pairing with a hot slice, a simple side, and a cold drink.",
+      "tag": "Lunch"
+    },
+    {
+      "title": "Senior-Friendly Deal",
+      "price": "Ask in store",
+      "description": "Easy portions, clear pricing, and staff help for guests who prefer a simple order.",
+      "tag": "Community"
+    },
+    {
+      "title": "Family Takeout Night",
+      "price": "Order online",
+      "description": "Build a larger order with pizza, garlic bread, fries, and 2L drinks.",
+      "tag": "Takeout"
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/uploads/south-pizza-photo-29.jpg",
+      "alt": "Fresh pizza served on a warm restaurant table",
+      "title": "Handcrafted pizza"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-30.jpg",
+      "alt": "Sunny beach shoreline near blue water",
+      "title": "Beach-side mood"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-31.jpg",
+      "alt": "Warm cafe interior with wood tables",
+      "title": "Cafe warmth"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-32.jpg",
+      "alt": "Coffee prepared at a cafe counter",
+      "title": "Fresh coffee"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-33.jpg",
+      "alt": "Friends enjoying food at a restaurant table",
+      "title": "Friendly visits"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-34.jpg",
+      "alt": "Ice cream scoops for dessert",
+      "title": "Summer dessert"
+    }
+  ],
+  "storeStatus": {
+    "mode": "auto",
+    "openLabel": "Open now",
+    "openDetail": "Taking orders today",
+    "closedLabel": "Closed now",
+    "closedDetail": "Please check today's hours"
+  },
+  "weeklyHours": [
+    {
+      "id": "Sun",
+      "day": "Sunday",
+      "shortDay": "Sun",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Mon",
+      "day": "Monday",
+      "shortDay": "Mon",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Tue",
+      "day": "Tuesday",
+      "shortDay": "Tue",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Wed",
+      "day": "Wednesday",
+      "shortDay": "Wed",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Thu",
+      "day": "Thursday",
+      "shortDay": "Thu",
+      "open": "11:00",
+      "close": "23:00",
+      "closed": false
+    },
+    {
+      "id": "Fri",
+      "day": "Friday",
+      "shortDay": "Fri",
+      "open": "11:00",
+      "close": "24:00",
+      "closed": false
+    },
+    {
+      "id": "Sat",
+      "day": "Saturday",
+      "shortDay": "Sat",
+      "open": "11:00",
+      "close": "24:00",
+      "closed": false
+    }
+  ],
+  "layout": {
+    "defaultTheme": "system",
+    "heroMode": "slideshow",
+    "heroTextAlign": "left",
+    "heroOverlay": "strong",
+    "menuDensity": "compact",
+    "sectionSpacing": "compact",
+    "showDough": true,
+    "showSpecials": true,
+    "showGallery": true,
+    "showVisit": true,
+    "showMax": true,
+    "showFloatingOrder": true
+  },
+  "orderCategoryTiles": [
+    {
+      "id": "customize",
+      "label": "Customize",
+      "heading": "Build Your Own Pizza",
+      "category": "pizza",
+      "filter": "customize",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/southpizzadish.png?fit=500%2C500&ssl=1"
+    },
+    {
+      "id": "meat",
+      "label": "Meat",
+      "heading": "Meat Pizza Picks",
+      "category": "pizza",
+      "filter": "meat",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Meat-Club-Pizza-1.png?fit=1000%2C1000&ssl=1"
+    },
+    {
+      "id": "veggie",
+      "label": "Veggie",
+      "heading": "Veggie Pizza Picks",
+      "category": "pizza",
+      "filter": "veggie",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/corn-chese-pizza.png?fit=500%2C500&ssl=1"
+    },
+    {
+      "id": "vegan",
+      "label": "Vegan",
+      "heading": "Vegan Friendly Picks",
+      "category": "pizza",
+      "filter": "vegan",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Vegan-Cheese-Pizza-special.png?fit=500%2C500&ssl=1"
+    },
+    {
+      "id": "gluten-free",
+      "label": "Gluten Free",
+      "heading": "Gluten Free & Cauliflower",
+      "category": "pizza",
+      "filter": "gluten-free",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Gulten-Pizza.png?fit=1000%2C1000&ssl=1"
+    },
+    {
+      "id": "sides",
+      "label": "Sides",
+      "heading": "Sides & Shareables",
+      "category": "sides",
+      "filter": "",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Garlic-Bread.png?fit=500%2C500&ssl=1"
+    },
+    {
+      "id": "drinks",
+      "label": "Drinks",
+      "heading": "Cold Drinks",
+      "category": "drinks",
+      "filter": "",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coke2l.png?fit=1080%2C1080&ssl=1"
+    },
+    {
+      "id": "desserts",
+      "label": "Desserts",
+      "heading": "Desserts & Ice Cream",
+      "category": "dessert",
+      "filter": "",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/SCOOPY-ICE-CREAM.png?fit=500%2C500&ssl=1"
+    }
+  ],
+  "menuItems": [
+    {
+      "category": "pizza",
+      "name": "BBQ Chicken Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Chicken, Red onion, green peppers, BBQ sauce, Mozzarella & Cheddar cheese",
+      "longDescription": "Chicken, Red onion, green peppers, BBQ sauce, Mozzarella & Cheddar cheese",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/BBQ-Chicken-Pizza.png?fit=500%2C500&ssl=1",
+      "alt": "BBQ-Chicken-Pizza.png",
+      "sourceUrl": "https://southpizza.ca/product/bbq-chicken-pizza/",
+      "sku": "SP07",
+      "wooId": 4655
+    },
+    {
+      "category": "pizza",
+      "name": "Butter Chicken Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Butter gravy base, Red onion, green pepper, butter chicken, mozzarella & cilantro",
+      "longDescription": "Butter gravy base, Red onion, green pepper, butter chicken, mozzarella & cilantro",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/South-Pizza-3.png?fit=1000%2C1000&ssl=1",
+      "alt": "butter chicken pizza",
+      "sourceUrl": "https://southpizza.ca/product/butter-chicken-pizza/",
+      "sku": "SP22",
+      "wooId": 4663
+    },
+    {
+      "category": "pizza",
+      "name": "Canadian Classic Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Bacon, Pepperoni, Mushrooms, Mozzarella, Pizza Sauce",
+      "longDescription": "Bacon, Pepperoni, Mushrooms, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/canadian-classic.png?fit=1000%2C1000&ssl=1",
+      "alt": "canadian classic",
+      "sourceUrl": "https://southpizza.ca/product/canadian-classic-pizza/",
+      "sku": "SP02",
+      "wooId": 4768
+    },
+    {
+      "category": "pizza",
+      "name": "Chicken Supreme Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Chicken, Red onion, Green onion, Mashroom, Mozzarella & pizza sauce",
+      "longDescription": "Chicken, Red onion, Green onion, Mashroom, Mozzarella & pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Chicken-Supreme-Pizza-2.png?fit=1000%2C1000&ssl=1",
+      "alt": "Chicken supreme pizza",
+      "sourceUrl": "https://southpizza.ca/product/chicken-supreme-pizza/",
+      "sku": "SP05",
+      "wooId": 4652
+    },
+    {
+      "category": "pizza",
+      "name": "Chicken Tikka Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Homemade base Sauce topped with Red Onion, Green Pepper, Tikka Chicken, Cilantro & Mozzarella",
+      "longDescription": "Discover the Ultimate Chicken Tikka Pizza Experience the perfect blend of eastern spices and western comfort food with our Chicken Tikka Pizza. This culinary masterpiece combines the bold and aromatic flavors of chicken tikka with the gooey goodness of a classic pizza, delivering a taste you’ll crave again and again! Bold Flavors Packed in Every Bite Our Chicken Tikka Pizza is crafted using premium ingredients to ensure every bite is filled with rich, tantalizing goodness. On a perfectly baked crust, we layer a tangy tomato base infused with a hint of spices, followed by mozzarella cheese melted to perfection. At the heart of this feast is juicy, marinated chicken tikka that’s bursting with flavor, accompanied by a mix of fresh toppings like onions, capsicum, and red chili for that extra kick. Perfect for Any Occasion Whether it’s a casual family dinner, game night with friends, or a quick treat for yourself, the Chicken Tikka Pizza adds a touch of deliciousness to any moment. Designed to suit a variety of taste preferences, it’s the ideal choice for pizza lovers who seek something...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Paneer-chicken-tikka-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/chicken-tikka-pizza/",
+      "sku": "SP21",
+      "wooId": 4662
+    },
+    {
+      "category": "pizza",
+      "name": "Corn Cheese Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "corn, Mozzarella & Cheddar cheese, pizza sauce",
+      "longDescription": "corn, Mozzarella & Cheddar cheese, pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/corn-chese-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/corn-cheese-pizza/",
+      "sku": "SP25",
+      "wooId": 4666
+    },
+    {
+      "category": "pizza",
+      "name": "Create your Own Pizza",
+      "price": "$11.99",
+      "priceValue": 11.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 11.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 16.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 22.99
+        },
+        {
+          "label": "Party Size",
+          "price": 31.99
+        }
+      ],
+      "badge": "Top selling",
+      "groups": [
+        "customize",
+        "vegan",
+        "meat",
+        "veggie"
+      ],
+      "description": "Tomato Ancho Chopotle Alfredo Peato BBQ Tandoori Butter Chicken Tikka Masala Creamy Garlic –>",
+      "longDescription": "Experience gourmet pizza like never before, where every slice is tailored to your unique taste. Whether you’re craving a single slice or an entire pie, we ensure every bite delivers moments of pure satisfaction. Priced at just $4.49 for a single slice, our pizzas allow you to indulge without overextending your budget! Flavorful Sauces to Match Every Mood Our pizzas begin with your choice of sauce, setting the foundation for unforgettable flavor. Whether you love the classic tang of Tomato Sauce , the smoky goodness of BBQ Sauce , or the spicy kick of Chipotle Sauce , we have something for everyone. Prefer something creamier or adventurous? Dive into options like Butter Chicken Sauce , Tikka Masala Sauce , or Alfredo Sauce . We even offer our signature Pesto Sauce for those who crave a burst of fresh herbs. A Mix of Toppings for Endless Creativity Turn your pizza into a masterpiece with our extensive pizza toppings. Meat lovers can choose from classic favorites like Bacon , Pepperoni , Ham , and Beef . For a twist, savor our premium selections like Italian Sausage , Halal Pepperoni...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/southpizzadish.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/create-your-own-pizza/",
+      "sku": "SP19",
+      "wooId": 4658
+    },
+    {
+      "category": "pizza",
+      "name": "Deluxe Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Beef, Pepperoni, Mushroom, Green Peppers, Red Onions, Bacon, Mozzarella, Pizza Sauce",
+      "longDescription": "Beef, Pepperoni, Mushroom, Green Peppers, Red Onions, Bacon, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Deluxe-pizza.png?fit=1000%2C1000&ssl=1",
+      "alt": "Deluxe pizza",
+      "sourceUrl": "https://southpizza.ca/product/deluxe-pizza/",
+      "sku": "SP04",
+      "wooId": 4769
+    },
+    {
+      "category": "pizza",
+      "name": "Double Cheese",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Cheddar Cheese, Mozzarella, Pizza Sauce",
+      "longDescription": "Cheddar Cheese, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/double-cheese-pizza-1.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/double-cheese/",
+      "sku": "SP28",
+      "wooId": 4669
+    },
+    {
+      "category": "pizza",
+      "name": "Double Cheese Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Mozzarella, Cheddar Cheese & pizza sauce",
+      "longDescription": "Mozzarella, Cheddar Cheese & pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Double-Cheese-Pizza.png?fit=500%2C500&ssl=1",
+      "alt": "Double-Cheese-Pizza.png",
+      "sourceUrl": "https://southpizza.ca/product/double-cheese-pizza/",
+      "sku": "SP08",
+      "wooId": 4656
+    },
+    {
+      "category": "pizza",
+      "name": "Fiery Fusion Veg",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Green Pepper, Red Onion, tomatoes, Green Chilli, Ginger, Coriander, Mozzarella & Pizza sauce",
+      "longDescription": "Green Pepper, Red Onion, tomatoes, Green Chilli, Ginger, Coriander, Mozzarella & Pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fiery-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/fiery-fusion-veg/",
+      "sku": "SP101",
+      "wooId": 4802
+    },
+    {
+      "category": "pizza",
+      "name": "Gluten Free Pizza (special)",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Gluten Free",
+      "groups": [
+        "customize",
+        "gluten-free",
+        "veggie"
+      ],
+      "description": "Gluten Free Pizza (special) from the original South Pizza menu.",
+      "longDescription": "Gluten Free Pizza (special) from the original South Pizza menu.",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Gulten-Pizza.png?fit=1000%2C1000&ssl=1",
+      "alt": "Gulten Pizza",
+      "sourceUrl": "https://southpizza.ca/product/gluten-free-pizza-special/",
+      "sku": "SP105",
+      "wooId": 4811
+    },
+    {
+      "category": "pizza",
+      "name": "Greek Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Red onion, green olive, tomatoes, mozzarella, Feta cheese & pizza sauce",
+      "longDescription": "Red onion, green olive, tomatoes, mozzarella, Feta cheese & pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/greek-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/greek-pizza/",
+      "sku": "SP27",
+      "wooId": 4668
+    },
+    {
+      "category": "pizza",
+      "name": "Hawaiian Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Ham, Pineapple, Mozzarella and Pizza Sauce",
+      "longDescription": "Ham, Pineapple, Mozzarella and Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Hawaiin-1.png?fit=1000%2C1000&ssl=1",
+      "alt": "Hawaiin",
+      "sourceUrl": "https://southpizza.ca/product/hawaiian-pizza/",
+      "sku": "SP20",
+      "wooId": 4661
+    },
+    {
+      "category": "pizza",
+      "name": "Margherita Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Tomatoes, Pesto Sauce, Bocconcini Cheese, Fresh Basil & Mozzarella",
+      "longDescription": "Tomatoes, Pesto Sauce, Bocconcini Cheese, Fresh Basil & Mozzarella",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/margarita-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/margarita-pizza/",
+      "sku": "SP26",
+      "wooId": 4667
+    },
+    {
+      "category": "pizza",
+      "name": "Meat Club Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Top selling",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Pepperoni, bacon, ham, beef, sausage, Mozzarella & Pizza sauce",
+      "longDescription": "Pepperoni, bacon, ham, beef, sausage, Mozzarella & Pizza sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Meat-Club-Pizza-1.png?fit=1000%2C1000&ssl=1",
+      "alt": "Meat club pizza",
+      "sourceUrl": "https://southpizza.ca/product/meat-club-pizza/",
+      "sku": "SP06",
+      "wooId": 4653
+    },
+    {
+      "category": "pizza",
+      "name": "Paneer Tikka Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Homemade base Sauce topped with Red Onion, Green Pepper, Tikka Paneer, Cilantro & Mozzarella",
+      "longDescription": "Homemade base Sauce topped with Red Onion, Green Pepper, Tikka Paneer, Cilantro & Mozzarella",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Paneer-chicken-tikka-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/paneer-tikka-pizza/",
+      "sku": "SP21-1",
+      "wooId": 5242
+    },
+    {
+      "category": "pizza",
+      "name": "Pepperoni Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Top selling",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Pepperoni, Mozzarella, Pizza Sauce",
+      "longDescription": "Pepperoni, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Pepperoni-Pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/pepperoni-pizza/",
+      "sku": "SP100",
+      "wooId": 4767
+    },
+    {
+      "category": "pizza",
+      "name": "Spicy & Butter Paneer Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Red onion, green pepper, paneer, hot pepper, mozzarella & Acho Chipotle sauce",
+      "longDescription": "Red onion, green pepper, paneer, hot pepper, mozzarella & Acho Chipotle sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/spicy-butter-paneer.png?fit=1000%2C1000&ssl=1",
+      "alt": "spicy butter paneer",
+      "sourceUrl": "https://southpizza.ca/product/spicy-butter-paneer-pizza/",
+      "sku": "SP09",
+      "wooId": 4654
+    },
+    {
+      "category": "pizza",
+      "name": "Tandoori Chicken Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Meat",
+      "groups": [
+        "customize",
+        "meat"
+      ],
+      "description": "Home made base sauce topped with Red onion, green pepper, Tandoori Chicken, roasted red pepper, mozzarella & Cilantro",
+      "longDescription": "Home made base sauce topped with Red onion, green pepper, Tandoori Chicken, roasted red pepper, mozzarella & Cilantro",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Tandoori-chicken-pizza.png?fit=1000%2C1000&ssl=1",
+      "alt": "Tandoori chicken pizza",
+      "sourceUrl": "https://southpizza.ca/product/tandoori-paneer-chicken-pizza/",
+      "sku": "SP23",
+      "wooId": 4664
+    },
+    {
+      "category": "pizza",
+      "name": "Tandoori Paneer Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Home made base sauce topped with Red onion, green pepper, Tandoori Paneer, roasted red pepper, mozzarella & Cilantro",
+      "longDescription": "Home made base sauce topped with Red onion, green pepper, Tandoori Paneer, roasted red pepper, mozzarella & Cilantro",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/tandoori-chichek-pizza.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/tandoori-paneer-pizza/",
+      "sku": "SP23-1",
+      "wooId": 5248
+    },
+    {
+      "category": "pizza",
+      "name": "Vegan Cheese Pizza (special)",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegan",
+      "groups": [
+        "customize",
+        "vegan",
+        "veggie"
+      ],
+      "description": "Cheddar Cheese, Mozzarella, Pizza Sauce",
+      "longDescription": "Cheddar Cheese, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Vegan-Cheese-Pizza-special.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/vegan-cheese-pizza-special/",
+      "sku": "SP30",
+      "wooId": 4670
+    },
+    {
+      "category": "pizza",
+      "name": "Veggie Fans Pizza",
+      "price": "$14.99",
+      "priceValue": 14.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Medium (M)",
+          "price": 14.99
+        },
+        {
+          "label": "Large (L)",
+          "price": 19.99
+        },
+        {
+          "label": "Extra Large (XL)",
+          "price": 24.99
+        },
+        {
+          "label": "Party Size",
+          "price": 32.99
+        }
+      ],
+      "badge": "Vegetarian",
+      "groups": [
+        "customize",
+        "veggie"
+      ],
+      "description": "Green Peppers, Red Onions, Black Olives, Mushroom, Mozzarella, Pizza Sauce",
+      "longDescription": "Green Peppers, Red Onions, Black Olives, Mushroom, Mozzarella, Pizza Sauce",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Veggie-Fans-Pizza.png?fit=500%2C500&ssl=1",
+      "alt": "Veggie-Fans-Pizza.png",
+      "sourceUrl": "https://southpizza.ca/product/veggie-fans-pizza/",
+      "sku": "SP03",
+      "wooId": 4770
+    },
+    {
+      "category": "sides",
+      "name": "Cauliflower Bites (300 gm)",
+      "price": "$12.99",
+      "priceValue": 12.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 12.99
+        }
+      ],
+      "badge": "Gluten Free",
+      "groups": [
+        "sides",
+        "gluten-free"
+      ],
+      "description": "Cauliflower Bites (300 gm)",
+      "longDescription": "Irresistibly Crispy and Flavorful! Looking for a snack that’s as delightful as it is healthy? Our Cauliflower Bites are here to revolutionize your snacking experience! These bites are made from premium-quality, fresh cauliflower florets, carefully seasoned and baked to a perfect golden crisp. Whether you’re enjoying them as a standalone snack or enhancing your favorite meals, they’re loaded with flavor and crunch that will keep you coming back for more. Perfect for Any Occasion Cauliflower Bites are light yet satisfying, making them an excellent option for every moment. Enjoy them during movie nights, as part of a party platter, or even as a companion to your favorite dips and sauces. Their versatility makes them a go-to favorite for all age groups, and their delightful taste will have you ditching unhealthy snack options. Whether you are planning a casual gathering or need a quick midday bite, Cauliflower Bites are the perfect choice. Upgrade your snacking game with a balance of texture and flavor in every bite. Nutritious, Delicious, and Guilt-Free Savor every bite without...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Untitled-design-1.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/cauliflower-bites-300-gm/",
+      "sku": "SP305",
+      "wooId": 5096
+    },
+    {
+      "category": "sides",
+      "name": "Chicken Tikka",
+      "price": "$15.99",
+      "priceValue": 15.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Tandoori (12 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Afghani (12 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Lemon (12 pieces)",
+          "price": 15.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "meat"
+      ],
+      "description": "Tandoori, Afghani, Lemon Chicken Tikka",
+      "longDescription": "Unmatched Flavor in Every Bite Experience the rich and authentic taste of Chicken Tikka Thighs, a classic dish bursting with mouthwatering flavors. Perfectly seasoned with a blend of traditional spices, these tender chicken thighs are marinated to perfection, ensuring each bite is as flavorful as the last. Whether you’re planning a festive dinner or a casual meal, Chicken Tikka Thighs are the ideal choice to elevate your culinary experience. Ingredients That Speak Quality Our Chicken Tikka Thighs are made using premium-quality chicken sourced responsibly from trusted farms. The thighs are carefully hand-selected to ensure tenderness while being infused with a mix of spices, including cumin, coriander, turmeric, and paprika. The marinade incorporates yogurt for added richness and moisture, delivering meat that is succulent and perfectly cooked every time. These flavorful thighs are made fresh with no artificial preservatives or additives, so you can enjoy the authentic taste without compromise. Why Choose Chicken Tikka Thighs? Chicken Tikka Thighs are the perfect solution for home...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-03-at-9.56.08-PM.jpeg?fit=1600%2C1226&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/chicken-tikka-thighs/",
+      "sku": "SP301",
+      "wooId": 5078
+    },
+    {
+      "category": "sides",
+      "name": "Fish Tikka",
+      "price": "$15.99",
+      "priceValue": 15.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Tandoori (12 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Afghani (12 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Lemon Fish Tikka (Coastal Achari) (12 pieces)",
+          "price": 15.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "meat"
+      ],
+      "description": "Fish Tikka, Tandoori Fish Tikka, Afghani Fish Tikka, Lemon Fish Tikka (Coastal Achari)",
+      "longDescription": "Experience Flavorful Perfection Indulge in a culinary delight with our exquisitely prepared Fish Tikka. Crafted with precision and care, this dish combines a harmonious blend of fresh fish, aromatic spices, and authentic cooking techniques to bring the rich flavors of traditional Indian cuisine to your table. Whether you’re hosting a gathering, enjoying a family dinner, or simply treating yourself to something special, Fish Tikka promises to elevate your dining experience. Quality Ingredients, Uncompromised Taste Our Fish Tikka is made using premium-quality, sustainably sourced fish to ensure a fresh and delectable taste in every bite. Marinated with a mix of yogurt, ginger, garlic, and a medley of spices like turmeric, coriander, and chili powder, it offers a burst of flavor that is both satisfying and memorable. Grilled to perfection, each piece achieves a delicate balance between smoky char and juicy tenderness. Perfect for Any Occasion Serve Fish Tikka as an appetizer, main course, or even as a part of a festive platter. Pair it with mint chutney, lemon wedges, or a side of...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fish-tikka.jpeg?fit=1520%2C1600&ssl=1",
+      "alt": "fish tikka",
+      "sourceUrl": "https://southpizza.ca/product/fish-tikka/",
+      "sku": "SP300",
+      "wooId": 5077
+    },
+    {
+      "category": "sides",
+      "name": "Fries",
+      "price": "$4.89 - $6.99",
+      "priceValue": 4.89,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 4.89
+        },
+        {
+          "label": "Honey Chilli Fries (300 gm)",
+          "price": 6.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides"
+      ],
+      "description": "Regular, Honey Chilli Fries (300 gm)",
+      "longDescription": "Irresistibly Crispy and Golden If you’re craving the perfect side dish or snack, our fries are just what you need. Crisp on the outside and fluffy on the inside, these golden fries are crafted to deliver exceptional taste in every bite. Whether paired with your favorite dip or enjoyed on their own, they offer the ideal balance of flavor and texture. Made with Quality Ingredients We use only high-quality potatoes to ensure you get the best fries possible. Each piece is seasoned to perfection, delivering a consistent, flavorful experience. From the peeling process to slicing and frying, every step is designed to preserve the natural goodness of the potatoes while enhancing their crunch and taste. No shortcuts here—just great fries. Perfect for Any Occasion Our fries are versatile enough to complement any meal, from juicy burgers to hearty salads. They’re also great for sharing during gatherings, movie nights, or as a solo treat when you’re in the mood for something crispy and delicious. No matter the occasion, these fries are sure to satisfy your appetite.",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fries.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/fries/",
+      "sku": "SP307",
+      "wooId": 5080
+    },
+    {
+      "category": "sides",
+      "name": "Garlic Bread",
+      "price": "$2.49 - $4.49",
+      "priceValue": 2.49,
+      "orderable": true,
+      "options": [
+        {
+          "label": "2 pieces",
+          "price": 2.49
+        },
+        {
+          "label": "4 pieces",
+          "price": 4.49
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "veggie"
+      ],
+      "description": "+ Extra Charges for Cheese Delicious Garlic Bread | Enjoy Best Garlic Bread in port elgin",
+      "longDescription": "The Perfect Blend of Freshness and Flavor Indulge in the irresistible taste of garlic bread, where freshly baked goodness meets the savory richness of garlic and butter. Perfectly toasted to achieve that delicate balance between soft and crispy, our garlic bread is the ultimate comfort food to enhance your dining experience. Whether paired with pasta, soups, or enjoyed as a standalone snack, it offers a harmony of taste that delights the senses with every bite. Crafted for Quality and Taste Our garlic bread is crafted with precision using premium ingredients. From freshly minced garlic to rich, creamy butter, and a dash of perfectly seasoned herbs, every component is carefully selected to guarantee maximum satisfaction. The bread itself is baked to fluffy perfection, ensuring a soft interior contrasted by its golden, crispy edges. Each loaf is a celebration of artisanal baking combined with a tantalizing burst of flavor. Perfect for Every Occasion Garlic bread is a versatile choice that fits seamlessly with any meal or gathering. Hosting a dinner party? Our garlic bread makes the...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Garlic-Bread.png?fit=500%2C500&ssl=1",
+      "alt": "Garlic-Bread.png",
+      "sourceUrl": "https://southpizza.ca/product/garlic-bread-4/",
+      "sku": "SP15",
+      "wooId": 3792
+    },
+    {
+      "category": "sides",
+      "name": "Italian Cheese Sticks (10 Sticks)",
+      "price": "$10.99",
+      "priceValue": 10.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 10.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "veggie"
+      ],
+      "description": "Delicious Italian Cheese Sticks | Enjoy the Best Italian Cheese Sticks in port elgin.",
+      "longDescription": "Discover the Irresistible Taste of Italian Cheese Sticks Unleash your taste buds with the rich and savory delight of Italian Cheese Sticks, a perfect blend of authentic Italian flavors and crunchy goodness. Ideal as an appetizer, snack, or side dish, these cheese sticks are crafted to offer a satisfying taste experience that will leave you craving more. Made with premium-quality cheese and carefully selected ingredients, they’re sure to be a hit at your dinner table or during casual gatherings with friends and family. Premium Quality & Wholesome Ingredients Our Italian Cheese Sticks are crafted using only the finest ingredients, ensuring every bite delivers uncompromised quality and flavor. Each stick is made with creamy, melt-in-your-mouth mozzarella cheese, perfectly complemented by a crispy golden crust seasoned with herbs like oregano and basil. These cheese sticks truly capture the essence of traditional Italian cuisine, offering an authentic and irresistible taste in every bite. Whether you prefer them dipped in marinara sauce or enjoyed on their own, the delicate balance of...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/22G-Tarp.png?fit=810%2C810&ssl=1",
+      "alt": "22G-Tarp.png",
+      "sourceUrl": "https://southpizza.ca/product/italian-cheese-sticks/",
+      "sku": "SP14",
+      "wooId": 3791
+    },
+    {
+      "category": "sides",
+      "name": "Jalapeno Poppers (8 pieces)",
+      "price": "$13.99",
+      "priceValue": 13.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 13.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides"
+      ],
+      "description": "Jalapeno Poppers (6 pieces)",
+      "longDescription": "Jalapeno Poppers (6 pieces)",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/South-Pizza-3.png?fit=1080%2C1080&ssl=1",
+      "alt": "South Pizza (3)",
+      "sourceUrl": "https://southpizza.ca/product/jalapeno-poppers-6-pieces/",
+      "sku": "SP306",
+      "wooId": 5097
+    },
+    {
+      "category": "sides",
+      "name": "Lahori Fish Fried (1 LB)",
+      "price": "$13.99",
+      "priceValue": 13.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 13.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "meat"
+      ],
+      "description": "Lahori Fish Fried (12 pieces)",
+      "longDescription": "Experience the Irresistible Taste of Lahori Fish Fried Indulge in the timeless flavors of Lahori Fish Fried, a signature delicacy that brings the rich culinary heritage of Lahore straight to your dining table. Perfectly seasoned with aromatic spices and fried to a satisfying crisp, this dish delivers an authentic taste experience. Whether you are serving it at family dinners, special occasions, or casual gatherings, Lahori Fish Fried stands out as a crowd-pleaser that never fails to impress. Crafted with Premium Ingredients for Maximum Freshness At the heart of Lahori Fish Fried lies our dedication to using only the finest quality fish and carefully curated spices. The fish is marinated in a unique blend of traditional Lahori masala, lending it a deep and flavorful profile. Every bite carries the unmistakable essence of expertly balanced spices, creating a gastronomic adventure that is both comforting and satisfying. Whether prepared as a standalone dish or paired with chutneys and salads, Lahori Fish Fried promises excellence in both taste and texture. Why Choose Lahori Fish...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/lahori-fish.jpeg?fit=1562%2C1600&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/lahori-fish-fried-1-lb/",
+      "sku": "SP302",
+      "wooId": 5089
+    },
+    {
+      "category": "sides",
+      "name": "Paneer Tikka (12 Pcs)",
+      "price": "$13.99",
+      "priceValue": 13.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 13.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "veggie",
+        "meat"
+      ],
+      "description": "Paneer Tikka",
+      "longDescription": "A Classic Delight: Paneer Tikka Looking for a perfect starter that is rich in Indian flavors and equally nutritious? Paneer Tikka is your answer. This classic dish is crafted with succulent cubes of paneer (Indian cottage cheese) marinated with aromatic spices, yogurt, and herbs, then grilled or roasted to perfection. Offering a delightful blend of textures and authentic taste, Paneer Tikka makes a flawless choice for all your gatherings, festive celebrations, or quiet evenings at home. Flavorful Marination for Ultimate Satisfaction The secret to Paneer Tikka’s vibrant flavor lies in its marination. The combination of spices, including turmeric, red chili powder, garam masala, cumin, and tangy yogurt, penetrates each cube, making every bite a burst of flavor. Think juicy, smoky paneer chunks paired with charred vegetables like bell peppers and onions—an irresistible dish that satisfies both your palate and nutritional needs. Versatility at Its Best Paneer Tikka shines not only as a starter but also as a versatile meal component. Add it to wraps, sandwiches, or salads, or serve it...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/paneer-tikka.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/paneer-tikka/",
+      "sku": "SP302-1",
+      "wooId": 5200
+    },
+    {
+      "category": "sides",
+      "name": "Samosas – 2 Pieces",
+      "price": "$5.00",
+      "priceValue": 5,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 5
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "veggie",
+        "meat"
+      ],
+      "description": "Fresh Samosas in port elgin",
+      "longDescription": "Discover the Authentic Taste of Samosas Samosas are a beloved snack known for their irresistible crunch and savory fillings. With their triangular shape and perfectly golden-brown crust, samosas hold a special place in cuisines worldwide, especially in Indian cooking. Whether you’re looking for a quick appetizer, a party snack, or a satisfying meal, samosas are the ultimate choice for any occasion. The Perfect Combination of Crispy and Savory Every bite of a samosa brings together a delightful combination of textures and flavors. The outer pastry is flaky yet crisp, and the inside is filled with a mix of flavorful ingredients. Traditional samosas often feature spiced potatoes, green peas, and a medley of rich seasonings like cumin, coriander, and turmeric. Some varieties may include protein-packed options such as chicken, lamb, or paneer, creating a unique taste experience for every preference. Why Choose Our Samosas? Our samosas are crafted with care, using high-quality ingredients and authentic recipes to bring you the best culinary experience. Whether you prefer classic...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Samosas.png?fit=500%2C500&ssl=1",
+      "alt": "Samosas.png",
+      "sourceUrl": "https://southpizza.ca/product/samosas/",
+      "sku": "SP11",
+      "wooId": 3789
+    },
+    {
+      "category": "sides",
+      "name": "Tandoori Leg & Thigh (Bone-in)",
+      "price": "$15.99",
+      "priceValue": 15.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Tandoor (2 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Afghani (2 pieces)",
+          "price": 15.99
+        },
+        {
+          "label": "Lemon (2 pieces)",
+          "price": 15.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "meat"
+      ],
+      "description": "Tandoori Leg (Bone in Chicken) (2 pieces)",
+      "longDescription": "Bring the Taste of Authentic Tandoori to Your Table Delight your taste buds with our succulent Tandoori Leg, crafted to bring the rich flavors of Indian cuisine into your home. Perfectly marinated with a blend of exotic spices and herbs, the Tandoori Leg delivers an irresistible aromatic experience with every bite. Whether you’re hosting a dinner party, celebrating a special occasion, or looking to spice up your everyday meals, this dish is sure to stand out. What Makes Our Tandoori Leg Special? Achieving the perfect Tandoori flavor requires more than just the right ingredients – it’s about the process. Our Tandoori Leg is marinated for hours, allowing the spices to deeply penetrate the juicy meat for an unmatched depth of flavor. Traditional spices like turmeric, cayenne, paprika, and garam masala come together to create the signature tandoori taste that is both bold and vibrant. Cooked to perfection, each piece boasts tender, smoky meat with crisp, charred edges that will have you craving more. Versatile and Ready-to-Serve The Tandoori Leg is incredibly versatile. Whether you...",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-03-at-9.55.21-PM.jpeg?fit=1438%2C1600&ssl=1",
+      "alt": "WhatsApp Image 2025-11-03 at 9.55.21 PM",
+      "sourceUrl": "https://southpizza.ca/product/tandoori-leg-bone-in-chicken/",
+      "sku": "SP303",
+      "wooId": 5090
+    },
+    {
+      "category": "sides",
+      "name": "Wings",
+      "price": "$10.99",
+      "priceValue": 10.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Classic (8 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Tandoori (8 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Lemon (8 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Bone-In (8 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Boneless Breaded (8 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Classic (12 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Tandoori (12 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Lemon (12 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Bone-In (12 pieces)",
+          "price": 10.99
+        },
+        {
+          "label": "Boneless Breaded (12 pieces)",
+          "price": 10.99
+        }
+      ],
+      "badge": "Side Item",
+      "groups": [
+        "sides",
+        "meat"
+      ],
+      "description": "Wings from the original South Pizza menu.",
+      "longDescription": "Wings from the original South Pizza menu.",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/chicken-wings.png?fit=500%2C500&ssl=1",
+      "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
+      "sourceUrl": "https://southpizza.ca/product/wings/",
+      "sku": "SP304",
+      "wooId": 5079
+    },
+    {
+      "category": "drinks",
+      "name": "A&W Root Beer (500ml)",
+      "price": "$2.99",
+      "priceValue": 2.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 2.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/aw500.png?fit=1080%2C1080&ssl=1",
+      "alt": "aw500",
+      "sourceUrl": "https://southpizza.ca/product/aw-root-beer-500ml/",
+      "sku": "SPB004",
+      "wooId": 6030
+    },
+    {
+      "category": "drinks",
+      "name": "Canada Dry Ginger-Ale (500ml)",
+      "price": "$2.99",
+      "priceValue": 2.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 2.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Canada-Dry-Ginger.png?fit=1080%2C1080&ssl=1",
+      "alt": "Canada Dry Ginger",
+      "sourceUrl": "https://southpizza.ca/product/canada-dry-ginger-ale-500ml/",
+      "sku": "SPB006",
+      "wooId": 6032
+    },
+    {
+      "category": "drinks",
+      "name": "Coca Cola (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coca.png?fit=1080%2C1080&ssl=1",
+      "alt": "coca",
+      "sourceUrl": "https://southpizza.ca/product/coca-cola-500ml/",
+      "sku": "SPB001",
+      "wooId": 6027
+    },
+    {
+      "category": "drinks",
+      "name": "Coca Cola Diet (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coke.png?fit=1080%2C1080&ssl=1",
+      "alt": "coke",
+      "sourceUrl": "https://southpizza.ca/product/coca-cola-diet-500ml/",
+      "sku": "SPB002",
+      "wooId": 6028
+    },
+    {
+      "category": "drinks",
+      "name": "Coca Cola Diet Pop (2L)",
+      "price": "$5.99",
+      "priceValue": 5.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 5.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/cokediet.png?fit=1080%2C1080&ssl=1",
+      "alt": "cokediet",
+      "sourceUrl": "https://southpizza.ca/product/coca-cola-diet-pop-2l/",
+      "sku": "SPB018",
+      "wooId": 6043
+    },
+    {
+      "category": "drinks",
+      "name": "Coca Cola Regular Pop (2L)",
+      "price": "$5.99",
+      "priceValue": 5.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 5.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coke2l.png?fit=1080%2C1080&ssl=1",
+      "alt": "coke2l",
+      "sourceUrl": "https://southpizza.ca/product/coca-cola-regular-pop-2l/",
+      "sku": "SPB019",
+      "wooId": 6044
+    },
+    {
+      "category": "drinks",
+      "name": "Coca Cola Zero (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coca0.png?fit=1080%2C1080&ssl=1",
+      "alt": "coca0",
+      "sourceUrl": "https://southpizza.ca/product/coca-cola-zero-500ml/",
+      "sku": "SPB003",
+      "wooId": 6029
+    },
+    {
+      "category": "drinks",
+      "name": "Dragonfruit Vitamin Water (591ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/dragonfruit.png?fit=1080%2C1080&ssl=1",
+      "alt": "dragonfruit",
+      "sourceUrl": "https://southpizza.ca/product/dragonfruit-vitamin-water-591ml/",
+      "sku": "SPB012",
+      "wooId": 6038
+    },
+    {
+      "category": "drinks",
+      "name": "Fanta (500ml)",
+      "price": "$2.99",
+      "priceValue": 2.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 2.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Fanta.png?fit=1080%2C1080&ssl=1",
+      "alt": "Fanta",
+      "sourceUrl": "https://southpizza.ca/product/fanta-500ml/",
+      "sku": "SPB005",
+      "wooId": 6031
+    },
+    {
+      "category": "drinks",
+      "name": "Fuze Lemon Iced Tea (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/fuze.png?fit=1080%2C1080&ssl=1",
+      "alt": "fuze",
+      "sourceUrl": "https://southpizza.ca/product/fuze-lemon-iced-tea-500ml/",
+      "sku": "SPB008",
+      "wooId": 6034
+    },
+    {
+      "category": "drinks",
+      "name": "Fuze Lemon Iced Tea Zero Sugar (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/fuze0.png?fit=1080%2C1080&ssl=1",
+      "alt": "fuze0",
+      "sourceUrl": "https://southpizza.ca/product/fuze-lemon-iced-tea-zero-sugar-500ml/",
+      "sku": "SPB009",
+      "wooId": 6035
+    },
+    {
+      "category": "drinks",
+      "name": "Kiwi strawberry Vitamin Water (591ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/kiwi.png?fit=1080%2C1080&ssl=1",
+      "alt": "kiwi",
+      "sourceUrl": "https://southpizza.ca/product/kiwi-strawberry-vitamin-water-591ml/",
+      "sku": "SPB013",
+      "wooId": 6039
+    },
+    {
+      "category": "drinks",
+      "name": "Monster Energy Drink (473ml)",
+      "price": "$4.99",
+      "priceValue": 4.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 4.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/monster.png?fit=1080%2C1080&ssl=1",
+      "alt": "monster",
+      "sourceUrl": "https://southpizza.ca/product/monster-energy-drink-473ml/",
+      "sku": "SPB014",
+      "wooId": 6040
+    },
+    {
+      "category": "drinks",
+      "name": "Monster Zero-Ultra Energy Drink (473ml)",
+      "price": "$4.99",
+      "priceValue": 4.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 4.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/monsterzero.png?fit=1080%2C1080&ssl=1",
+      "alt": "monsterzero",
+      "sourceUrl": "https://southpizza.ca/product/monster-zero-ultra-energy-drink-473ml/",
+      "sku": "SPB015",
+      "wooId": 6041
+    },
+    {
+      "category": "drinks",
+      "name": "Orange Vitamin Water (591ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/orange.png?fit=1080%2C1080&ssl=1",
+      "alt": "orange",
+      "sourceUrl": "https://southpizza.ca/product/orange-vitamin-water-591ml/",
+      "sku": "SPB011",
+      "wooId": 6037
+    },
+    {
+      "category": "drinks",
+      "name": "Smart Water (500ml)",
+      "price": "$3.99",
+      "priceValue": 3.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 3.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/smart.png?fit=1080%2C1080&ssl=1",
+      "alt": "smart",
+      "sourceUrl": "https://southpizza.ca/product/smart-water-500ml/",
+      "sku": "SPB010",
+      "wooId": 6036
+    },
+    {
+      "category": "drinks",
+      "name": "Sprite (500ml)",
+      "price": "$2.99",
+      "priceValue": 2.99,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 2.99
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Sprite.png?fit=1080%2C1080&ssl=1",
+      "alt": "Sprite",
+      "sourceUrl": "https://southpizza.ca/product/sprite-500ml/",
+      "sku": "SPB007",
+      "wooId": 6033
+    },
+    {
+      "category": "drinks",
+      "name": "Sprite Pop (2L)",
+      "price": "$5.79",
+      "priceValue": 5.79,
+      "orderable": true,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 5.79
+        }
+      ],
+      "badge": "Beverages",
+      "groups": [
+        "drinks"
+      ],
+      "description": "Beverages, port elgin, beach party",
+      "longDescription": "Beverages, port elgin, beach party",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/sprite2l.png?fit=1080%2C1080&ssl=1",
+      "alt": "sprite2l",
+      "sourceUrl": "https://southpizza.ca/product/sprite-pop-2l/",
+      "sku": "SPB016",
+      "wooId": 6042
+    },
+    {
+      "category": "dessert",
+      "name": "Scoopy Ice Cream",
+      "price": "Ask in store",
+      "priceValue": null,
+      "orderable": false,
+      "options": [
+        {
+          "label": "Regular",
+          "price": 0
+        }
+      ],
+      "badge": "Ice Cream",
+      "groups": [
+        "desserts"
+      ],
+      "description": "Scoopy Ice Cream",
+      "longDescription": "Scoopy Ice Cream",
+      "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/SCOOPY-ICE-CREAM.png?fit=500%2C500&ssl=1",
+      "alt": "Scoopy Ice Cream,",
+      "sourceUrl": "https://southpizza.ca/product/scoopy-ice-cream/",
+      "sku": "SP12-1",
+      "wooId": 4872
+    }
+  ],
+  "customizationOptions": [
+    {
+      "label": "Regular crust",
+      "price": 0
+    },
+    {
+      "label": "Thin crust",
+      "price": 0
+    },
+    {
+      "label": "Tomato sauce",
+      "price": 0
+    },
+    {
+      "label": "Ancho Chipotle sauce",
+      "price": 0
+    },
+    {
+      "label": "Alfredo sauce",
+      "price": 0
+    },
+    {
+      "label": "Pesto sauce",
+      "price": 0
+    },
+    {
+      "label": "BBQ sauce",
+      "price": 0
+    },
+    {
+      "label": "Tandoori sauce",
+      "price": 0
+    },
+    {
+      "label": "Butter Chicken sauce",
+      "price": 0
+    },
+    {
+      "label": "Tikka Masala sauce",
+      "price": 0
+    },
+    {
+      "label": "Creamy Garlic sauce",
+      "price": 0
+    },
+    {
+      "label": "Bacon",
+      "price": 2.35
+    },
+    {
+      "label": "Pepperoni",
+      "price": 2.35
+    },
+    {
+      "label": "Ham",
+      "price": 2.35
+    },
+    {
+      "label": "Beef",
+      "price": 2.35
+    },
+    {
+      "label": "Chicken",
+      "price": 2.35
+    },
+    {
+      "label": "Italian Sausage",
+      "price": 2.35
+    },
+    {
+      "label": "Halal Pepperoni",
+      "price": 2.35
+    },
+    {
+      "label": "Halal Chicken",
+      "price": 2.35
+    },
+    {
+      "label": "Green Pepper",
+      "price": 2.35
+    },
+    {
+      "label": "Red Onions",
+      "price": 2.35
+    },
+    {
+      "label": "Mushroom",
+      "price": 2.35
+    },
+    {
+      "label": "Tomatoes",
+      "price": 2.35
+    },
+    {
+      "label": "Pineapples",
+      "price": 2.35
+    },
+    {
+      "label": "Paneer",
+      "price": 2.35
+    },
+    {
+      "label": "Black Olives",
+      "price": 2.35
+    },
+    {
+      "label": "Hot Peppers",
+      "price": 2.35
+    },
+    {
+      "label": "Green Olives",
+      "price": 2.35
+    },
+    {
+      "label": "Mozzarella Cheese",
+      "price": 2.35
+    },
+    {
+      "label": "Feta Cheese",
+      "price": 2.35
+    },
+    {
+      "label": "Cheddar Cheese",
+      "price": 2.35
+    },
+    {
+      "label": "Vegan Cheese",
+      "price": 2.35
+    },
+    {
+      "label": "Creamy Garlic dip",
+      "price": 0.99
+    },
+    {
+      "label": "Ranch dip",
+      "price": 0.99
+    },
+    {
+      "label": "Marinara dip",
+      "price": 0.99
+    },
+    {
+      "label": "Cheddar dip",
+      "price": 0.99
+    },
+    {
+      "label": "Jalapeno dip",
+      "price": 0.99
+    }
+  ]
+}

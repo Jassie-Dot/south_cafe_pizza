@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+const MINIMUM_DELIVERY_SUBTOTAL = 18;
+
 function isPresent(value) {
   return typeof value === "string" && value.trim().length > 1;
 }
@@ -15,16 +17,21 @@ export async function POST(request) {
     const order = await request.json();
     const items = Array.isArray(order.items) ? order.items : [];
     const customer = order.customer || {};
+    const orderType = order.orderType === "delivery" ? "delivery" : "pickup";
 
     if (!items.length) {
       return NextResponse.json({ error: "Order must include at least one item." }, { status: 400 });
+    }
+
+    if (order.orderType && order.orderType !== "pickup" && order.orderType !== "delivery") {
+      return NextResponse.json({ error: "Order type must be pickup or delivery." }, { status: 400 });
     }
 
     if (!isPresent(customer.name) || !isPresent(customer.phone)) {
       return NextResponse.json({ error: "Name and phone are required." }, { status: 400 });
     }
 
-    if (order.orderType === "delivery" && !isPresent(customer.address)) {
+    if (orderType === "delivery" && !isPresent(customer.address)) {
       return NextResponse.json({ error: "Delivery address is required." }, { status: 400 });
     }
 
@@ -38,6 +45,18 @@ export async function POST(request) {
 
     if (invalidItem) {
       return NextResponse.json({ error: "One or more order items are invalid." }, { status: 400 });
+    }
+
+    const subtotal = items.reduce(
+      (sum, item) => sum + Number(item.unitPrice) * Number(item.quantity),
+      0
+    );
+
+    if (orderType === "delivery" && subtotal < MINIMUM_DELIVERY_SUBTOTAL) {
+      return NextResponse.json(
+        { error: "Delivery orders need at least $18.00 before tax." },
+        { status: 400 }
+      );
     }
 
     return NextResponse.json(
