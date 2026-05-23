@@ -272,6 +272,18 @@ html[data-theme="dark"] #menu input::placeholder {
   color: rgba(248, 241, 229, 0.48) !important;
 }
 
+html[data-theme="dark"] #menu .menu-card {
+  background-color: rgba(17, 24, 38, 0.96) !important;
+  color: #f8f1e5 !important;
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.36) !important;
+}
+
+html[data-theme="dark"] #menu .menu-card [class*="bg-white"],
+html[data-theme="dark"] #menu .menu-card [class*="bg-ivory"],
+html[data-theme="dark"] #menu .menu-card [class*="bg-surf"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 html[data-theme="dark"] #explore {
   background-color: #070a12 !important;
 }
@@ -338,6 +350,40 @@ html[data-theme="dark"] .order-cart-drawer textarea {
 html[data-theme="dark"] .order-cart-drawer input::placeholder,
 html[data-theme="dark"] .order-cart-drawer textarea::placeholder {
   color: rgba(248, 241, 229, 0.48) !important;
+}
+
+html[data-theme="dark"] .product-detail-modal {
+  background-color: rgba(2, 6, 14, 0.78) !important;
+}
+
+html[data-theme="dark"] .product-detail-card {
+  background-color: #0b101a !important;
+  color: #f8f1e5 !important;
+  box-shadow: 0 32px 92px rgba(0, 0, 0, 0.56) !important;
+}
+
+html[data-theme="dark"] .product-detail-card [class*="bg-white"],
+html[data-theme="dark"] .product-detail-card [class*="bg-ivory"],
+html[data-theme="dark"] .product-detail-card [class*="bg-surf"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .product-detail-card [class*="text-charcoal"] {
+  color: rgba(248, 241, 229, 0.92) !important;
+}
+
+html[data-theme="dark"] .product-detail-card [class*="border-charcoal"],
+html[data-theme="dark"] .product-detail-card [class*="ring-charcoal"] {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  --tw-ring-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+html[data-theme="dark"] .product-detail-card input,
+html[data-theme="dark"] .product-detail-card select,
+html[data-theme="dark"] .product-detail-card textarea {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #f8f1e5 !important;
 }
 
 html[data-theme="dark"] .mobile-action-bar {
@@ -422,6 +468,19 @@ iframe {
 
 img {
   user-select: none;
+}
+
+.menu-ingredients-preview {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (min-width: 640px) {
+  .menu-ingredients-preview {
+    -webkit-line-clamp: 3;
+  }
 }
 
 button,

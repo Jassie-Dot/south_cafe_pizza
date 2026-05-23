@@ -236,6 +236,60 @@ function isOrderable(item) {
   return item.orderable !== false && item.priceValue !== null;
 }
 
+function isBuildYourOwnPizza(item) {
+  const name = (item?.name || "").toLowerCase();
+  const sku = (item?.sku || "").toLowerCase();
+
+  return (
+    item?.category === "pizza" &&
+    ((name.includes("create") && name.includes("own")) ||
+      (name.includes("build") && name.includes("own")) ||
+      sku === "sp19")
+  );
+}
+
+function matchesMenuGroup(item, filter) {
+  if (filter === "all") {
+    return true;
+  }
+
+  if (filter === "customize") {
+    return isBuildYourOwnPizza(item);
+  }
+
+  return item.groups?.includes(filter);
+}
+
+function itemIngredients(item) {
+  if (!item) {
+    return "";
+  }
+
+  if (isBuildYourOwnPizza(item)) {
+    return "Regular or thin crust, sauce, cheese, and toppings of your choice.";
+  }
+
+  const genericCopy =
+    /(discover|experience|perfect blend|occasion|crave|ultimate|from the original|beverages|beach party|priced at|customer-friendly|tailored)/i;
+  const cleanCopy = (value) =>
+    String(value || "")
+      .replace(/\s*[–—-]>\s*$/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  const description = cleanCopy(item.description);
+  const longDescription = cleanCopy(item.longDescription);
+
+  if (description && !genericCopy.test(description)) {
+    return description;
+  }
+
+  if (longDescription && !genericCopy.test(longDescription)) {
+    return longDescription;
+  }
+
+  return item.name || item.badge || item.category || "";
+}
+
 function searchMenuItem(item, query) {
   if (!query) {
     return true;
@@ -243,8 +297,7 @@ function searchMenuItem(item, query) {
 
   const searchable = [
     item.name,
-    item.description,
-    item.longDescription,
+    itemIngredients(item),
     item.badge,
     item.category,
     item.price,
@@ -821,7 +874,7 @@ function Hero({ deals = topDeals, layout = layoutSettings }) {
   const slideshowEnabled = settings.heroMode !== "static" && heroDeals.length > 1;
   const { scrollY } = useScroll();
   const imageY = useTransform(scrollY, [0, 760], [0, reduceMotion ? 0 : 120]);
-  const imageScale = useTransform(scrollY, [0, 760], [1, reduceMotion ? 1 : 1.08]);
+  const backgroundScale = useTransform(scrollY, [0, 760], [1.08, reduceMotion ? 1.08 : 1.16]);
 
   useEffect(() => {
     setActiveDeal((value) => Math.min(value, Math.max(0, heroDeals.length - 1)));
@@ -842,24 +895,35 @@ function Hero({ deals = topDeals, layout = layoutSettings }) {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[30svh] overflow-hidden bg-charcoal text-white sm:min-h-[46svh] lg:min-h-[64svh]"
+      className="relative isolate min-h-[42svh] overflow-hidden bg-charcoal text-white sm:min-h-[58svh] lg:min-h-[72svh]"
     >
       <AnimatePresence mode="wait">
-        <motion.img
+        <motion.div
           key={currentDeal.image || currentDeal.title}
-          src={currentDeal.image}
-          alt=""
-          className="absolute inset-0 -z-20 h-full w-full object-cover"
-          fetchPriority="high"
-          style={{ y: imageY, scale: imageScale }}
-          initial={reduceMotion ? false : { opacity: 0, scale: 1.04 }}
-          animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
-          exit={reduceMotion ? undefined : { opacity: 0, scale: 1.03 }}
+          className="absolute inset-0 -z-20 overflow-hidden"
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={reduceMotion ? undefined : { opacity: 1 }}
+          exit={reduceMotion ? undefined : { opacity: 0 }}
           transition={{ duration: 0.8, ease: smoothEase }}
-        />
+        >
+          <motion.img
+            src={currentDeal.image}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover opacity-35 blur-xl"
+            fetchPriority="high"
+            style={{ y: imageY, scale: backgroundScale }}
+          />
+          <motion.img
+            src={currentDeal.image}
+            alt=""
+            className="absolute inset-0 h-full w-full object-contain p-2 sm:p-4 md:p-6"
+            fetchPriority="high"
+            style={{ y: imageY }}
+          />
+        </motion.div>
       </AnimatePresence>
-      <div className={`absolute inset-0 -z-10 ${strongOverlay ? "bg-charcoal/65" : "bg-charcoal/48"}`} aria-hidden="true" />
-      <div className={`absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t ${strongOverlay ? "from-charcoal/85" : "from-charcoal/60"} to-transparent`} aria-hidden="true" />
+      <div className={`absolute inset-0 -z-10 ${strongOverlay ? "bg-charcoal/34" : "bg-charcoal/22"}`} aria-hidden="true" />
+      <div className={`absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t ${strongOverlay ? "from-charcoal/70" : "from-charcoal/48"} to-transparent`} aria-hidden="true" />
       <div className="absolute inset-x-0 top-0 -z-10 h-44 bg-gradient-to-b from-white/18 to-transparent" aria-hidden="true" />
       <div
         className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(135deg,rgba(255,255,255,0.14)_0_10%,transparent_10%_20%,rgba(255,255,255,0.1)_20%_30%,transparent_30%_100%)]"
@@ -895,6 +959,7 @@ function MenuCard({
   );
   const lineTotal =
     (Number(selectedOption.price) + customizationTotal(selectedCustomizations)) * quantity;
+  const ingredients = itemIngredients(item);
 
   function toggleCustomization(option) {
     const label = customizationLabel(option);
@@ -924,23 +989,23 @@ function MenuCard({
       exit={reduceMotion ? undefined : { opacity: 0, y: 18, scale: 0.98 }}
       whileHover={reduceMotion ? undefined : { y: -8 }}
       transition={{ duration: 0.55, ease: smoothEase }}
-      className="group flex h-full flex-col overflow-hidden rounded-md bg-white shadow-[0_14px_34px_rgba(36,33,29,0.14)] ring-1 ring-charcoal/10"
+      className="group menu-card flex h-full flex-col overflow-hidden rounded-md bg-white shadow-[0_14px_34px_rgba(36,33,29,0.14)] ring-1 ring-charcoal/10"
     >
       <button
         type="button"
         onClick={inspectItem}
-        className="relative aspect-[16/10] overflow-hidden bg-surf text-left"
+        className="relative aspect-square overflow-hidden bg-surf text-left sm:aspect-[16/10]"
         aria-label={`View details for ${item.name}`}
       >
         <motion.img
           src={item.image}
           alt={item.alt}
           loading="lazy"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain p-2 sm:object-cover sm:p-0"
           whileHover={reduceMotion ? undefined : { scale: 1.08 }}
           transition={{ duration: 0.9, ease: smoothEase }}
         />
-        <span className="absolute left-3 top-3 rounded-md bg-white/95 px-2.5 py-1.5 text-base font-black leading-tight text-charcoal shadow-sm sm:left-4 sm:top-4 sm:px-3 sm:py-2">
+        <span className="absolute left-2 top-2 rounded-md bg-white/95 px-2 py-1 text-[0.7rem] font-black leading-tight text-charcoal shadow-sm sm:left-4 sm:top-4 sm:px-3 sm:py-2 sm:text-base">
           {canOrder ? `From ${formatMoney(defaultOption(item).price)}` : item.price}
         </span>
         <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-md bg-charcoal/85 px-3 py-2 text-sm font-black uppercase text-white opacity-0 shadow-sm transition group-hover:opacity-100 group-focus-visible:opacity-100">
@@ -949,34 +1014,40 @@ function MenuCard({
         </span>
       </button>
 
-      <div className="flex flex-1 flex-col p-4 sm:p-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+      <div className="flex flex-1 flex-col p-3 sm:p-6">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
           <div>
-            <p className="text-base font-black uppercase leading-tight tracking-wide text-ocean sm:text-sm">{item.badge}</p>
+            <p className="text-[0.68rem] font-black uppercase leading-tight tracking-wide text-ocean sm:text-sm">{item.badge}</p>
             <button
               type="button"
               onClick={inspectItem}
-              className="mt-1 block text-left text-[1.55rem] font-black uppercase leading-[1.04] text-charcoal transition hover:text-ocean sm:text-2xl md:text-3xl"
+              className="mt-1 block text-left text-[0.98rem] font-black uppercase leading-[1.08] text-charcoal transition hover:text-ocean sm:text-2xl md:text-3xl"
             >
               {item.name}
             </button>
+            {ingredients ? (
+              <p className="menu-ingredients-preview mt-2 text-[0.72rem] font-semibold leading-snug text-charcoal/68 sm:text-base">
+                <span className="font-black uppercase text-charcoal">Ingredients: </span>
+                {ingredients}
+              </p>
+            ) : null}
           </div>
 
           {canOrder ? (
-            <div className="flex shrink-0 items-center gap-2 self-start rounded-md bg-ivory p-1 sm:bg-transparent sm:p-0">
+            <div className="flex shrink-0 items-center gap-1 self-start rounded-md bg-ivory p-1 sm:gap-2 sm:bg-transparent sm:p-0">
               <button
                 type="button"
                 onClick={() => setQuantity((value) => Math.max(1, value - 1))}
-                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-2xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
+                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12 sm:text-2xl"
                 aria-label={`Decrease ${item.name} quantity`}
               >
                 -
               </button>
-              <span className="min-w-7 text-center text-xl font-black text-charcoal sm:min-w-5">{quantity}</span>
+              <span className="min-w-5 text-center text-base font-black text-charcoal sm:text-xl">{quantity}</span>
               <button
                 type="button"
                 onClick={() => setQuantity((value) => value + 1)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-2xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
+                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12 sm:text-2xl"
                 aria-label={`Increase ${item.name} quantity`}
               >
                 +
@@ -986,16 +1057,16 @@ function MenuCard({
         </div>
 
         {canOrder ? (
-          <fieldset className="mt-4 grid gap-2 sm:gap-3">
+          <fieldset className="mt-3 grid gap-1.5 sm:mt-4 sm:gap-3">
             <legend className="sr-only">Choose size for {item.name}</legend>
             {item.options?.map((option, index) => {
               const active = optionIndex === index;
               return (
                 <label
                   key={option.label}
-                  className="flex cursor-pointer flex-col items-start gap-2 rounded-md border border-transparent px-2 py-2 text-base leading-snug text-charcoal/75 transition hover:bg-surf/60 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:border-0 sm:px-1 sm:py-1 sm:text-lg"
+                  className="flex cursor-pointer flex-col items-start gap-1 rounded-md border border-transparent px-1 py-1 text-[0.72rem] leading-snug text-charcoal/75 transition hover:bg-surf/60 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:border-0 sm:px-1 sm:py-1 sm:text-lg"
                 >
-                  <span className="flex items-center gap-3">
+                  <span className="flex items-center gap-2 sm:gap-3">
                     <input
                       type="radio"
                       name={`${item.name}-size`}
@@ -1005,19 +1076,19 @@ function MenuCard({
                     />
                     <span
                       aria-hidden="true"
-                      className={`flex h-6 w-6 items-center justify-center rounded-full border-2 ${
+                      className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 sm:h-6 sm:w-6 ${
                         active ? "border-ocean" : "border-ocean/70"
                       }`}
                     >
                       <span
-                        className={`h-3 w-3 rounded-full bg-ocean transition ${
+                        className={`h-2 w-2 rounded-full bg-ocean transition sm:h-3 sm:w-3 ${
                           active ? "scale-100" : "scale-0"
                         }`}
                       />
                     </span>
                     <span>{option.label}</span>
                   </span>
-                  <strong className="pl-8 text-base font-semibold text-charcoal sm:pl-0">
+                  <strong className="pl-8 text-[0.72rem] font-semibold text-charcoal sm:pl-0 sm:text-base">
                     {formatMoney(option.price)}
                   </strong>
                 </label>
@@ -1025,7 +1096,7 @@ function MenuCard({
             })}
           </fieldset>
         ) : (
-          <p className="mt-5 rounded-md bg-sand px-4 py-3 text-base font-bold text-charcoal sm:text-lg">
+          <p className="mt-4 rounded-md bg-sand px-3 py-2 text-sm font-bold text-charcoal sm:mt-5 sm:px-4 sm:py-3 sm:text-lg">
             Available in store
           </p>
         )}
@@ -1037,23 +1108,23 @@ function MenuCard({
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.32, ease: smoothEase }}
-              className="mt-5 overflow-hidden rounded-md border border-charcoal/10 bg-ivory p-4"
+              className="mt-4 overflow-hidden rounded-md border border-charcoal/10 bg-ivory p-3 sm:mt-5 sm:p-4"
             >
-              <p className="text-base font-black uppercase text-ocean">Customize</p>
-              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+              <p className="text-xs font-black uppercase text-ocean sm:text-base">Customize</p>
+              <div className="mt-3 grid grid-cols-2 gap-2">
                 {availableCustomizations.map((option) => (
-                  <label key={option.label} className="flex min-h-11 items-center justify-between gap-3 text-base font-bold text-charcoal sm:min-h-0 sm:gap-2">
-                    <span className="flex items-center gap-3">
+                  <label key={option.label} className="flex min-h-10 items-center justify-between gap-2 text-[0.72rem] font-bold text-charcoal sm:min-h-0 sm:text-base">
+                    <span className="flex items-center gap-2 sm:gap-3">
                     <input
                       type="checkbox"
                       checked={customizations.includes(option.label)}
                       onChange={() => toggleCustomization(option)}
-                      className="h-5 w-5 accent-ocean"
+                      className="h-4 w-4 accent-ocean sm:h-5 sm:w-5"
                     />
                       {option.label}
                     </span>
                     {option.price ? (
-                      <span className="text-sm font-black text-ocean">
+                      <span className="text-[0.68rem] font-black text-ocean sm:text-sm">
                         +{formatMoney(option.price)}
                       </span>
                     ) : null}
@@ -1064,11 +1135,11 @@ function MenuCard({
           ) : null}
         </AnimatePresence>
 
-        <div className="mt-auto grid grid-cols-2 gap-2 pt-5 sm:grid-cols-[0.75fr_0.85fr_1.2fr] sm:gap-3 sm:pt-6">
+        <div className="mt-auto grid grid-cols-2 gap-2 pt-4 sm:grid-cols-[0.75fr_0.85fr_1.2fr] sm:gap-3 sm:pt-6">
           <button
             type="button"
             onClick={inspectItem}
-            className="min-h-12 rounded-md border-2 border-ocean bg-white px-3 text-base font-black uppercase leading-tight tracking-wide text-ocean transition hover:bg-ocean hover:text-white sm:min-h-14 sm:px-4 sm:text-lg"
+            className="min-h-10 rounded-md border-2 border-ocean bg-white px-2 text-[0.7rem] font-black uppercase leading-tight tracking-wide text-ocean transition hover:bg-ocean hover:text-white sm:min-h-14 sm:px-4 sm:text-lg"
           >
             Details
           </button>
@@ -1076,7 +1147,7 @@ function MenuCard({
             type="button"
             onClick={() => setCustomizing((value) => !value)}
             disabled={!canCustomize}
-            className="min-h-12 rounded-md border-2 border-charcoal bg-white px-3 text-base font-black uppercase leading-tight tracking-wide text-charcoal transition hover:border-ocean hover:text-ocean disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-14 sm:px-4 sm:text-lg"
+            className="min-h-10 rounded-md border-2 border-charcoal bg-white px-2 text-[0.7rem] font-black uppercase leading-tight tracking-wide text-charcoal transition hover:border-ocean hover:text-ocean disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-14 sm:px-4 sm:text-lg"
           >
             Customize
           </button>
@@ -1084,7 +1155,7 @@ function MenuCard({
             type="button"
             onClick={addItem}
             disabled={!canOrder}
-            className="col-span-2 min-h-12 rounded-md bg-ocean px-3 text-base font-black uppercase leading-tight tracking-wide text-white shadow-soft transition hover:bg-charcoal disabled:cursor-not-allowed disabled:bg-charcoal/35 sm:col-span-1 sm:min-h-14 sm:px-4 sm:text-lg"
+            className="col-span-2 min-h-10 rounded-md bg-ocean px-2 text-[0.72rem] font-black uppercase leading-tight tracking-wide text-white shadow-soft transition hover:bg-charcoal disabled:cursor-not-allowed disabled:bg-charcoal/35 sm:col-span-1 sm:min-h-14 sm:px-4 sm:text-lg"
           >
             {canOrder
               ? `Add ${formatMoney(lineTotal)}`
@@ -1124,6 +1195,7 @@ function ProductDetailModal({
   const lineTotal = selectedOption
     ? (Number(selectedOption.price) + addOnTotal) * quantity
     : 0;
+  const ingredients = itemIngredients(item);
 
   useEffect(() => {
     setOptionIndex(0);
@@ -1168,7 +1240,7 @@ function ProductDetailModal({
     <AnimatePresence>
       {item ? (
         <motion.div
-          className="fixed inset-0 z-[92] overflow-y-auto bg-charcoal/70 p-4 backdrop-blur-xl sm:p-6"
+          className="product-detail-modal fixed inset-0 z-[92] overflow-y-auto bg-charcoal/70 p-4 backdrop-blur-xl sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label={`${item.name} details`}
@@ -1184,7 +1256,7 @@ function ProductDetailModal({
             onClick={onClose}
           />
           <motion.article
-            className="relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-lg bg-white shadow-[0_30px_90px_rgba(0,0,0,0.35)] lg:grid-cols-[0.92fr_1.08fr]"
+            className="product-detail-card relative mx-auto grid w-full max-w-6xl overflow-hidden rounded-lg bg-white shadow-[0_30px_90px_rgba(0,0,0,0.35)] lg:grid-cols-[0.92fr_1.08fr]"
             initial={reduceMotion ? false : { opacity: 0, y: 30, scale: 0.98 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
             exit={reduceMotion ? undefined : { opacity: 0, y: 20, scale: 0.98 }}
@@ -1194,7 +1266,7 @@ function ProductDetailModal({
               <img
                 src={item.image}
                 alt={item.alt}
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-contain p-4"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/65 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 text-white sm:p-6">
@@ -1205,7 +1277,7 @@ function ProductDetailModal({
               </div>
             </div>
 
-            <div className="max-h-[min(760px,calc(100svh-2rem))] overflow-y-auto p-5 sm:p-7">
+            <div className="product-detail-content max-h-[min(760px,calc(100svh-2rem))] overflow-y-auto p-5 sm:p-7">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-sm font-black uppercase text-ocean">
@@ -1230,9 +1302,14 @@ function ProductDetailModal({
                 </button>
               </div>
 
-              <p className="mt-5 text-xl font-semibold leading-relaxed text-charcoal/72 sm:text-lg">
-                {item.longDescription || item.description}
-              </p>
+              {ingredients ? (
+                <div className="mt-5 rounded-md border border-charcoal/10 bg-ivory p-4">
+                  <p className="text-sm font-black uppercase text-ocean">Ingredients</p>
+                  <p className="mt-2 text-xl font-semibold leading-relaxed text-charcoal/72 sm:text-lg">
+                    {ingredients}
+                  </p>
+                </div>
+              ) : null}
 
               {item.sourceUrl ? (
                 <a
@@ -1251,29 +1328,29 @@ function ProductDetailModal({
                   <legend className="text-sm font-black uppercase text-ocean">
                     Choose Option
                   </legend>
-                  <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {item.options?.map((option, index) => {
                       const active = optionIndex === index;
                       return (
                         <label
                           key={`${option.label}-${index}`}
-                          className={`flex cursor-pointer items-center justify-between gap-3 rounded-md border p-3 text-base font-bold transition ${
+                          className={`flex cursor-pointer flex-col items-start justify-between gap-1 rounded-md border p-2 text-[0.76rem] font-bold transition sm:flex-row sm:items-center sm:gap-3 sm:p-3 sm:text-base ${
                             active
                               ? "border-ocean bg-surf text-charcoal"
                               : "border-charcoal/12 bg-white text-charcoal/75 hover:border-ocean"
                           }`}
                         >
-                          <span className="flex items-center gap-3">
+                          <span className="flex items-center gap-2 sm:gap-3">
                             <input
                               type="radio"
                               name={`${item.name}-modal-option`}
                               checked={active}
                               onChange={() => setOptionIndex(index)}
-                              className="h-5 w-5 accent-ocean"
+                              className="h-4 w-4 accent-ocean sm:h-5 sm:w-5"
                             />
                             {option.label}
                           </span>
-                          <strong className="shrink-0 text-ocean">
+                          <strong className="pl-6 text-ocean sm:pl-0">
                             {formatMoney(option.price)}
                           </strong>
                         </label>
@@ -1292,23 +1369,23 @@ function ProductDetailModal({
                   <legend className="text-sm font-black uppercase text-ocean">
                     Customize Pizza
                   </legend>
-                  <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {availableCustomizations.map((option) => (
                       <label
                         key={option.label}
-                        className="flex min-h-12 cursor-pointer items-center justify-between gap-3 rounded-md border border-charcoal/10 bg-ivory px-3 py-2 text-base font-bold text-charcoal transition hover:border-ocean"
+                        className="flex min-h-12 cursor-pointer items-center justify-between gap-2 rounded-md border border-charcoal/10 bg-ivory px-2 py-2 text-[0.72rem] font-bold text-charcoal transition hover:border-ocean sm:gap-3 sm:px-3 sm:text-base"
                       >
-                        <span className="flex items-center gap-3">
+                        <span className="flex items-center gap-2 sm:gap-3">
                           <input
                             type="checkbox"
                             checked={customizations.includes(option.label)}
                             onChange={() => toggleCustomization(option)}
-                            className="h-5 w-5 accent-ocean"
+                            className="h-4 w-4 accent-ocean sm:h-5 sm:w-5"
                           />
                           {option.label}
                         </span>
                         {option.price ? (
-                          <span className="shrink-0 text-sm font-black text-ocean">
+                          <span className="shrink-0 text-[0.68rem] font-black text-ocean sm:text-sm">
                             +{formatMoney(option.price)}
                           </span>
                         ) : null}
@@ -1406,11 +1483,10 @@ function FeaturedMenu({
     return menuList.filter((item) => {
       const matchesCategory =
         activeCategoryId === "all" || item.category === activeCategoryId;
-      const matchesGroup =
-        activeGroupFilter === "all" || item.groups?.includes(activeGroupFilter);
+      const matchesGroup = matchesMenuGroup(item, activeGroupFilter);
       const matchesQuick =
         quickFilter === "all" ||
-        (quickFilter === "orderable" ? isOrderable(item) : item.groups?.includes(quickFilter));
+        (quickFilter === "orderable" ? isOrderable(item) : matchesMenuGroup(item, quickFilter));
 
       if (!matchesCategory || !matchesGroup || !matchesQuick) {
         return false;
@@ -1534,7 +1610,7 @@ function FeaturedMenu({
                 whileHover={reduceMotion ? undefined : { y: -6, scale: 1.02 }}
                 whileTap={reduceMotion ? undefined : { scale: 0.98 }}
                 transition={{ duration: 0.3, ease: smoothEase }}
-                className={`group relative min-h-24 overflow-hidden rounded-md text-white shadow-soft ring-2 transition sm:min-h-36 ${
+                className={`group relative aspect-square min-h-0 overflow-hidden rounded-md text-white shadow-soft ring-2 transition sm:aspect-auto sm:min-h-36 ${
                   active
                     ? "ring-ocean ring-offset-4 ring-offset-[#fbfaf6]"
                     : "ring-transparent hover:ring-ocean/60"
@@ -1553,7 +1629,7 @@ function FeaturedMenu({
                     Selected
                   </span>
                 ) : null}
-                <span className="relative flex min-h-24 items-center justify-center px-3 text-center text-sm font-black uppercase leading-none tracking-wide text-white drop-shadow sm:min-h-36 sm:text-lg">
+                <span className="relative flex h-full min-h-0 items-center justify-center px-3 text-center text-sm font-black uppercase leading-none tracking-wide text-white drop-shadow sm:min-h-36 sm:text-lg">
                   {tile.label}
                 </span>
               </motion.button>
@@ -1593,10 +1669,20 @@ function FeaturedMenu({
             </div>
 
             {visibleItems.length ? (
-              <motion.div layout className={`mt-8 ${visibleItems.length === 1 ? 'flex justify-center' : 'grid gap-6 md:grid-cols-2 lg:grid-cols-3'}`}>
+              <motion.div
+                layout
+                className={`mt-8 ${
+                  visibleItems.length === 1
+                    ? "grid place-items-center"
+                    : "grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 lg:grid-cols-3"
+                }`}
+              >
                 <AnimatePresence>
                   {visibleItems.map((item) => (
-                    <div key={`${item.category}-${item.name}`} className={visibleItems.length === 1 ? 'w-full max-w-md' : 'w-full'}>
+                    <div
+                      key={`${item.category}-${item.name}`}
+                      className={visibleItems.length === 1 ? "w-full max-w-sm sm:max-w-md" : "w-full"}
+                    >
                       <MenuCard
                         item={item}
                         onAdd={onAdd}
@@ -2486,7 +2572,7 @@ function HotDealsModal({ open, onClose, deals = topDeals, onOrderClick }) {
     <AnimatePresence>
       {open ? (
         <motion.div
-          className="fixed inset-0 z-[96] overflow-y-auto bg-charcoal/88 p-4 text-white backdrop-blur-xl sm:p-6"
+          className="hot-deals-modal fixed inset-0 z-[96] overflow-y-auto bg-charcoal/88 p-4 text-white backdrop-blur-xl sm:p-6"
           role="dialog"
           aria-modal="true"
           aria-label="South Pizza hot deals"
@@ -2522,7 +2608,7 @@ function HotDealsModal({ open, onClose, deals = topDeals, onOrderClick }) {
                   <img
                     src={deal.image}
                     alt={deal.title}
-                    className="aspect-[4/3] w-full bg-charcoal object-cover"
+                    className="aspect-[4/5] w-full bg-charcoal/70 object-contain p-2"
                   />
                   <div className="p-5">
                     <p className="text-sm font-black uppercase text-sand">{deal.eyebrow}</p>
