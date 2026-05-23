@@ -842,7 +842,7 @@ function Hero({ deals = topDeals, layout = layoutSettings }) {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[64svh] overflow-hidden bg-charcoal text-white"
+      className="relative isolate min-h-[30svh] overflow-hidden bg-charcoal text-white sm:min-h-[46svh] lg:min-h-[64svh]"
     >
       <AnimatePresence mode="wait">
         <motion.img
@@ -940,7 +940,7 @@ function MenuCard({
           whileHover={reduceMotion ? undefined : { scale: 1.08 }}
           transition={{ duration: 0.9, ease: smoothEase }}
         />
-        <span className="absolute left-4 top-4 rounded-md bg-white/95 px-3 py-2 text-lg font-black leading-tight text-charcoal shadow-sm sm:text-base">
+        <span className="absolute left-3 top-3 rounded-md bg-white/95 px-2.5 py-1.5 text-base font-black leading-tight text-charcoal shadow-sm sm:left-4 sm:top-4 sm:px-3 sm:py-2">
           {canOrder ? `From ${formatMoney(defaultOption(item).price)}` : item.price}
         </span>
         <span className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-md bg-charcoal/85 px-3 py-2 text-sm font-black uppercase text-white opacity-0 shadow-sm transition group-hover:opacity-100 group-focus-visible:opacity-100">
@@ -949,34 +949,34 @@ function MenuCard({
         </span>
       </button>
 
-      <div className="flex flex-1 flex-col p-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-1 flex-col p-4 sm:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
           <div>
             <p className="text-base font-black uppercase leading-tight tracking-wide text-ocean sm:text-sm">{item.badge}</p>
             <button
               type="button"
               onClick={inspectItem}
-              className="mt-1 block text-left text-[2rem] font-black uppercase leading-[1.02] text-charcoal transition hover:text-ocean sm:text-2xl md:text-3xl"
+              className="mt-1 block text-left text-[1.55rem] font-black uppercase leading-[1.04] text-charcoal transition hover:text-ocean sm:text-2xl md:text-3xl"
             >
               {item.name}
             </button>
           </div>
 
           {canOrder ? (
-            <div className="flex shrink-0 items-center gap-3 self-start rounded-md bg-ivory p-1 sm:gap-2 sm:bg-transparent sm:p-0">
+            <div className="flex shrink-0 items-center gap-2 self-start rounded-md bg-ivory p-1 sm:bg-transparent sm:p-0">
               <button
                 type="button"
                 onClick={() => setQuantity((value) => Math.max(1, value - 1))}
-                className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-3xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
+                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-2xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
                 aria-label={`Decrease ${item.name} quantity`}
               >
                 -
               </button>
-              <span className="min-w-8 text-center text-2xl font-black text-charcoal sm:min-w-5 sm:text-xl">{quantity}</span>
+              <span className="min-w-7 text-center text-xl font-black text-charcoal sm:min-w-5">{quantity}</span>
               <button
                 type="button"
                 onClick={() => setQuantity((value) => value + 1)}
-                className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-3xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
+                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-charcoal/35 bg-white text-2xl leading-none text-charcoal transition hover:border-ocean hover:text-ocean sm:h-12 sm:w-12"
                 aria-label={`Increase ${item.name} quantity`}
               >
                 +
@@ -986,14 +986,14 @@ function MenuCard({
         </div>
 
         {canOrder ? (
-          <fieldset className="mt-4 grid gap-3">
+          <fieldset className="mt-4 grid gap-2 sm:gap-3">
             <legend className="sr-only">Choose size for {item.name}</legend>
             {item.options?.map((option, index) => {
               const active = optionIndex === index;
               return (
                 <label
                   key={option.label}
-                  className="flex cursor-pointer flex-col items-start gap-2 rounded-md border border-transparent px-3 py-3 text-xl leading-snug text-charcoal/75 transition hover:bg-surf/60 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:border-0 sm:px-1 sm:py-1 sm:text-lg"
+                  className="flex cursor-pointer flex-col items-start gap-2 rounded-md border border-transparent px-2 py-2 text-base leading-snug text-charcoal/75 transition hover:bg-surf/60 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:border-0 sm:px-1 sm:py-1 sm:text-lg"
                 >
                   <span className="flex items-center gap-3">
                     <input
@@ -1017,7 +1017,7 @@ function MenuCard({
                     </span>
                     <span>{option.label}</span>
                   </span>
-                  <strong className="pl-9 text-xl font-semibold text-charcoal sm:pl-0 sm:text-base">
+                  <strong className="pl-8 text-base font-semibold text-charcoal sm:pl-0">
                     {formatMoney(option.price)}
                   </strong>
                 </label>
@@ -1025,7 +1025,7 @@ function MenuCard({
             })}
           </fieldset>
         ) : (
-          <p className="mt-5 rounded-md bg-sand px-4 py-3 text-xl font-bold text-charcoal sm:text-lg">
+          <p className="mt-5 rounded-md bg-sand px-4 py-3 text-base font-bold text-charcoal sm:text-lg">
             Available in store
           </p>
         )}
@@ -1039,10 +1039,10 @@ function MenuCard({
               transition={{ duration: 0.32, ease: smoothEase }}
               className="mt-5 overflow-hidden rounded-md border border-charcoal/10 bg-ivory p-4"
             >
-              <p className="text-lg font-black uppercase text-ocean sm:text-base">Customize</p>
+              <p className="text-base font-black uppercase text-ocean">Customize</p>
               <div className="mt-3 grid gap-2 sm:grid-cols-2">
                 {availableCustomizations.map((option) => (
-                  <label key={option.label} className="flex min-h-12 items-center justify-between gap-3 text-lg font-bold text-charcoal sm:min-h-0 sm:gap-2 sm:text-base">
+                  <label key={option.label} className="flex min-h-11 items-center justify-between gap-3 text-base font-bold text-charcoal sm:min-h-0 sm:gap-2">
                     <span className="flex items-center gap-3">
                     <input
                       type="checkbox"
@@ -1064,11 +1064,11 @@ function MenuCard({
           ) : null}
         </AnimatePresence>
 
-        <div className="mt-auto grid gap-3 pt-6 sm:grid-cols-[0.75fr_0.85fr_1.2fr]">
+        <div className="mt-auto grid grid-cols-2 gap-2 pt-5 sm:grid-cols-[0.75fr_0.85fr_1.2fr] sm:gap-3 sm:pt-6">
           <button
             type="button"
             onClick={inspectItem}
-            className="min-h-16 rounded-md border-2 border-ocean bg-white px-4 text-xl font-black uppercase leading-tight tracking-wide text-ocean transition hover:bg-ocean hover:text-white sm:min-h-14 sm:text-lg"
+            className="min-h-12 rounded-md border-2 border-ocean bg-white px-3 text-base font-black uppercase leading-tight tracking-wide text-ocean transition hover:bg-ocean hover:text-white sm:min-h-14 sm:px-4 sm:text-lg"
           >
             Details
           </button>
@@ -1076,7 +1076,7 @@ function MenuCard({
             type="button"
             onClick={() => setCustomizing((value) => !value)}
             disabled={!canCustomize}
-            className="min-h-16 rounded-md border-2 border-charcoal bg-white px-4 text-xl font-black uppercase leading-tight tracking-wide text-charcoal transition hover:border-ocean hover:text-ocean disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-14 sm:text-lg"
+            className="min-h-12 rounded-md border-2 border-charcoal bg-white px-3 text-base font-black uppercase leading-tight tracking-wide text-charcoal transition hover:border-ocean hover:text-ocean disabled:cursor-not-allowed disabled:opacity-50 sm:min-h-14 sm:px-4 sm:text-lg"
           >
             Customize
           </button>
@@ -1084,7 +1084,7 @@ function MenuCard({
             type="button"
             onClick={addItem}
             disabled={!canOrder}
-            className="min-h-16 rounded-md bg-ocean px-4 text-xl font-black uppercase leading-tight tracking-wide text-white shadow-soft transition hover:bg-charcoal disabled:cursor-not-allowed disabled:bg-charcoal/35 sm:min-h-14 sm:text-lg"
+            className="col-span-2 min-h-12 rounded-md bg-ocean px-3 text-base font-black uppercase leading-tight tracking-wide text-white shadow-soft transition hover:bg-charcoal disabled:cursor-not-allowed disabled:bg-charcoal/35 sm:col-span-1 sm:min-h-14 sm:px-4 sm:text-lg"
           >
             {canOrder
               ? `Add ${formatMoney(lineTotal)}`
@@ -1481,7 +1481,7 @@ function FeaturedMenu({
       id="menu"
       ref={sectionRef}
       className={`relative isolate overflow-hidden bg-[#fbfaf6] ${
-        settings.sectionSpacing === "compact" ? "py-12 sm:py-14" : "py-16 sm:py-20"
+        settings.sectionSpacing === "compact" ? "py-8 sm:py-14" : "py-10 sm:py-20"
       }`}
       initial={reduceMotion ? false : { opacity: 0, y: 34, filter: "blur(6px)" }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -1507,20 +1507,20 @@ function FeaturedMenu({
       />
 
       <div className="section-shell">
-        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end">
           <div>
             <p className="section-kicker">Start Your Order</p>
-            <h2 className="section-title font-sans text-[2.75rem] font-black uppercase tracking-normal sm:text-5xl md:text-6xl">
+            <h2 className="section-title font-sans text-[2.35rem] font-black uppercase tracking-normal sm:text-5xl md:text-6xl">
               Menu
             </h2>
           </div>
-          <ButtonAction onClick={onCartOpen} variant="dark" className="lg:shrink-0">
+          <ButtonAction onClick={onCartOpen} variant="dark" className="!min-h-12 !px-4 !py-2 !text-base sm:!min-h-14 sm:!px-6 sm:!py-3 sm:!text-lg lg:shrink-0">
             <Icon name="ShoppingCart" />
             {cartCount ? `Review Order (${cartCount})` : "Order Cart"}
           </ButtonAction>
         </div>
 
-        <div className="mt-10 flex snap-x gap-3 overflow-x-auto pb-2 sm:mt-12 sm:grid sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-4 xl:grid-cols-8">
+        <div className="mt-7 grid grid-cols-2 gap-3 sm:mt-10 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-8">
           {categoryTiles.map((tile, index) => {
             const active =
               activeTileId === tile.id &&
@@ -1534,7 +1534,7 @@ function FeaturedMenu({
                 whileHover={reduceMotion ? undefined : { y: -6, scale: 1.02 }}
                 whileTap={reduceMotion ? undefined : { scale: 0.98 }}
                 transition={{ duration: 0.3, ease: smoothEase }}
-                className={`group relative min-h-40 min-w-[76%] snap-start overflow-hidden rounded-md text-white shadow-soft ring-2 transition sm:min-h-36 sm:min-w-0 ${
+                className={`group relative min-h-24 overflow-hidden rounded-md text-white shadow-soft ring-2 transition sm:min-h-36 ${
                   active
                     ? "ring-ocean ring-offset-4 ring-offset-[#fbfaf6]"
                     : "ring-transparent hover:ring-ocean/60"
@@ -1549,11 +1549,11 @@ function FeaturedMenu({
                 />
                 <span className="absolute inset-0 bg-charcoal/42" aria-hidden="true" />
                 {active ? (
-                  <span className="absolute right-3 top-3 rounded-full bg-ocean px-3 py-1 text-xs font-black uppercase tracking-wide text-white shadow-sm">
+                  <span className="absolute right-2 top-2 rounded-full bg-ocean px-2 py-1 text-[0.65rem] font-black uppercase tracking-wide text-white shadow-sm sm:right-3 sm:top-3 sm:px-3 sm:text-xs">
                     Selected
                   </span>
                 ) : null}
-                <span className="relative flex min-h-40 items-center justify-center px-4 text-center text-xl font-black uppercase leading-none tracking-wide text-white drop-shadow sm:min-h-36 sm:px-3 sm:text-lg">
+                <span className="relative flex min-h-24 items-center justify-center px-3 text-center text-sm font-black uppercase leading-none tracking-wide text-white drop-shadow sm:min-h-36 sm:text-lg">
                   {tile.label}
                 </span>
               </motion.button>
@@ -2326,10 +2326,10 @@ function LocationContact({
 
 function HomeSectionNav({ activeTab, onNavigate }) {
   return (
-    <div className="section-shell pt-6 sm:pt-8">
+    <div className="section-shell pt-4 sm:pt-8">
       <nav
         aria-label="South Pizza sections"
-        className="flex max-w-full snap-x gap-2 overflow-x-auto rounded-lg border border-white/15 bg-charcoal/95 p-2 shadow-[0_18px_45px_rgba(7,10,18,0.2)] backdrop-blur sm:flex-wrap sm:overflow-visible"
+        className="flex max-w-full snap-x gap-1.5 overflow-x-auto rounded-md border border-white/15 bg-charcoal/95 p-1.5 shadow-[0_18px_45px_rgba(7,10,18,0.2)] backdrop-blur sm:flex-wrap sm:gap-2 sm:overflow-visible sm:rounded-lg sm:p-2"
       >
         {navLinks.map((link) => {
           const tabId = tabIdFromHref(link.href);
@@ -2341,7 +2341,7 @@ function HomeSectionNav({ activeTab, onNavigate }) {
               key={link.href}
               href={link.href}
               onClick={(event) => onNavigate(event, link)}
-              className={`group inline-flex min-h-12 shrink-0 snap-start items-center justify-center gap-2 rounded-md border px-4 py-2 text-base font-black leading-tight transition sm:px-5 ${
+              className={`group inline-flex min-h-10 shrink-0 snap-start items-center justify-center gap-1.5 rounded-md border px-3 py-2 text-sm font-black leading-tight transition sm:min-h-12 sm:gap-2 sm:px-5 sm:text-base ${
                 active
                   ? "border-ocean bg-ocean text-white shadow-[0_10px_24px_rgba(33,110,130,0.34)]"
                   : "border-white/10 bg-white/[0.08] text-white/86 hover:border-ocean/70 hover:bg-white/[0.14] hover:text-white"
@@ -2350,7 +2350,7 @@ function HomeSectionNav({ activeTab, onNavigate }) {
             >
               <Icon
                 name={iconName}
-                className={`h-5 w-5 transition ${active ? "text-white" : "text-sand/90 group-hover:text-white"}`}
+                className={`h-4 w-4 transition sm:h-5 sm:w-5 ${active ? "text-white" : "text-sand/90 group-hover:text-white"}`}
               />
               <span>{link.label}</span>
             </a>

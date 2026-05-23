@@ -46,12 +46,19 @@ body {
   min-height: 100vh;
   background: var(--page-bg);
   color: var(--page-text);
-  font-size: 18px;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 1.58;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   transition: background 260ms ease, color 260ms ease;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 18px;
+    line-height: 1.65;
+  }
 }
 
 body::before {
@@ -166,7 +173,7 @@ footer {
   input,
   select,
   textarea {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
