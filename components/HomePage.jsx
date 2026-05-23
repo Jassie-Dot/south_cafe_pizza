@@ -864,17 +864,29 @@ function SiteHeader({
   );
 }
 
-function Hero({ deals = topDeals, layout = layoutSettings }) {
+function Hero({ deals = topDeals, layout = layoutSettings, onOrderClick }) {
   const reduceMotion = useReducedMotion();
   const [activeDeal, setActiveDeal] = useState(0);
   const settings = editableLayout(layout);
   const heroDeals = editableList(deals, topDeals);
   const currentDeal = heroDeals[activeDeal] || heroDeals[0] || topDeals[0];
+  const dealTitle = currentDeal.title || currentDeal.eyebrow || "South Pizza Feature";
+  const dealPrice = currentDeal.price || "Fresh today";
+  const dealCopy =
+    currentDeal.description ||
+    "A fresh counter special staged like a real shop poster, ready for pickup, takeout, and a beach-side bite.";
   const strongOverlay = settings.heroOverlay === "strong";
   const slideshowEnabled = settings.heroMode !== "static" && heroDeals.length > 1;
+  const reelDeals = heroDeals.length ? heroDeals : [currentDeal];
+  const sidePanels = [
+    ["/uploads/south-pizza-photo-29.jpg", "Fresh pizza"],
+    ["/uploads/south-pizza-photo-32.jpg", "Cafe counter"],
+    ["/uploads/south-pizza-photo-34.jpg", "Dessert"]
+  ];
   const { scrollY } = useScroll();
-  const imageY = useTransform(scrollY, [0, 760], [0, reduceMotion ? 0 : 120]);
-  const backgroundScale = useTransform(scrollY, [0, 760], [1.08, reduceMotion ? 1.08 : 1.16]);
+  const imageY = useTransform(scrollY, [0, 760], [0, reduceMotion ? 0 : 24]);
+  const backgroundScale = useTransform(scrollY, [0, 760], [1.08, reduceMotion ? 1.08 : 1.14]);
+  const posterRotate = useTransform(scrollY, [0, 760], [reduceMotion ? 0 : -0.8, reduceMotion ? 0 : 0.8]);
 
   useEffect(() => {
     setActiveDeal((value) => Math.min(value, Math.max(0, heroDeals.length - 1)));
@@ -895,7 +907,7 @@ function Hero({ deals = topDeals, layout = layoutSettings }) {
   return (
     <section
       id="home"
-      className="relative isolate min-h-[42svh] overflow-hidden bg-charcoal text-white sm:min-h-[58svh] lg:min-h-[72svh]"
+      className="relative isolate overflow-hidden bg-charcoal py-10 text-white sm:py-12 lg:min-h-[520px] lg:py-8"
     >
       <AnimatePresence mode="wait">
         <motion.div
@@ -909,26 +921,131 @@ function Hero({ deals = topDeals, layout = layoutSettings }) {
           <motion.img
             src={currentDeal.image}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover opacity-35 blur-xl"
+            className="absolute inset-0 h-full w-full object-cover opacity-42 blur-xl"
             fetchPriority="high"
             style={{ y: imageY, scale: backgroundScale }}
           />
-          <motion.img
-            src={currentDeal.image}
-            alt=""
-            className="absolute inset-0 h-full w-full object-contain p-2 sm:p-4 md:p-6"
-            fetchPriority="high"
-            style={{ y: imageY }}
-          />
         </motion.div>
       </AnimatePresence>
-      <div className={`absolute inset-0 -z-10 ${strongOverlay ? "bg-charcoal/34" : "bg-charcoal/22"}`} aria-hidden="true" />
-      <div className={`absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t ${strongOverlay ? "from-charcoal/70" : "from-charcoal/48"} to-transparent`} aria-hidden="true" />
-      <div className="absolute inset-x-0 top-0 -z-10 h-44 bg-gradient-to-b from-white/18 to-transparent" aria-hidden="true" />
-      <div
-        className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(135deg,rgba(255,255,255,0.14)_0_10%,transparent_10%_20%,rgba(255,255,255,0.1)_20%_30%,transparent_30%_100%)]"
-        aria-hidden="true"
-      />
+      <div className={`absolute inset-0 -z-10 ${strongOverlay ? "bg-charcoal/58" : "bg-charcoal/44"}`} aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-44 bg-gradient-to-t from-black/70 to-transparent" aria-hidden="true" />
+      <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-black/50 to-transparent" aria-hidden="true" />
+
+      <div className="section-shell">
+        <div className="grid items-center gap-7 lg:grid-cols-[0.82fr_minmax(260px,330px)_0.58fr] lg:gap-8">
+          <motion.div
+            className="max-w-lg"
+            initial={reduceMotion ? false : { opacity: 0, y: 28 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: smoothEase }}
+          >
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-sand">
+              Hot From The Counter
+            </p>
+            <h1 className="mt-3 font-sans text-[2.7rem] font-black uppercase leading-[0.92] tracking-normal text-white sm:text-5xl lg:text-6xl">
+              {dealTitle}
+            </h1>
+            <p className="mt-4 max-w-md text-lg font-semibold leading-relaxed text-white/82 sm:text-xl lg:text-lg">
+              {dealCopy}
+            </p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <ButtonAction onClick={onOrderClick} className="!min-h-12 !px-5 !py-2 shadow-[0_18px_45px_rgba(200,75,55,0.34)]">
+                <Icon name="ShoppingBag" />
+                Order Now
+              </ButtonAction>
+              <ButtonLink href={contact.phoneHref} variant="secondary" className="!min-h-12 !px-5 !py-2">
+                <Icon name="Phone" />
+                Call Store
+              </ButtonLink>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="hero-reel-stage relative mx-auto w-full max-w-[310px] lg:max-w-[330px]"
+            style={{ y: imageY, rotate: posterRotate }}
+            initial={reduceMotion ? false : { opacity: 0, y: 34, scale: 0.96 }}
+            animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.85, ease: smoothEase }}
+          >
+            <div className="absolute -inset-5 rounded-lg border border-white/10 bg-white/10 shadow-[0_34px_100px_rgba(0,0,0,0.58)] backdrop-blur-md" aria-hidden="true" />
+            <div className="hero-reel-frame relative overflow-hidden rounded-md border border-sand/45 bg-black/40 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.55)]">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={currentDeal.image || dealTitle}
+                  src={currentDeal.image}
+                  alt={dealTitle}
+                  className="aspect-[4/5] w-full rounded-sm object-contain"
+                  fetchPriority="high"
+                  initial={reduceMotion ? false : { opacity: 0, y: 90, scale: 0.96 }}
+                  animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }}
+                  exit={reduceMotion ? undefined : { opacity: 0, y: -90, scale: 0.98 }}
+                  transition={{ duration: 0.62, ease: smoothEase }}
+                />
+              </AnimatePresence>
+            </div>
+            <div className="hero-price-chip absolute -bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-md border border-white/15 bg-charcoal/82 px-4 py-3 text-sm font-black uppercase text-white shadow-soft backdrop-blur">
+              <Icon name="Flame" className="h-4 w-4 text-sand" />
+              {dealPrice}
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="hero-side-reel hidden overflow-hidden lg:block"
+            initial={reduceMotion ? false : { opacity: 0, x: 28 }}
+            animate={reduceMotion ? undefined : { opacity: 1, x: 0 }}
+            transition={{ delay: 0.12, duration: 0.7, ease: smoothEase }}
+          >
+            <div className="hero-side-reel-track grid gap-3">
+              {[...sidePanels, ...sidePanels].map(([src, label], index) => (
+                <div key={`${src}-${index}`} className="group relative h-24 overflow-hidden rounded-md border border-white/15 bg-white/10 shadow-soft">
+                  <img
+                    src={src}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <span className="absolute inset-0 bg-charcoal/26" aria-hidden="true" />
+                  <span className="absolute bottom-3 left-3 rounded-md bg-black/42 px-3 py-1 text-xs font-black uppercase tracking-wide text-white backdrop-blur">
+                    {label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {slideshowEnabled ? (
+          <div className="mt-7 grid gap-3 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div className="hero-deal-reel overflow-hidden rounded-md border border-white/12 bg-white/10 py-2 backdrop-blur">
+              <div className="hero-deal-reel-track flex min-w-max gap-3 px-3">
+                {[...reelDeals, ...reelDeals].map((deal, index) => (
+                  <span
+                    key={`${deal.image}-${index}`}
+                    className="inline-flex items-center gap-2 rounded-md bg-black/32 px-3 py-1.5 text-xs font-black uppercase tracking-wide text-white"
+                  >
+                    <Icon name="Clapperboard" className="h-3.5 w-3.5 text-sand" />
+                    {deal.title || deal.eyebrow || "Fresh deal"}
+                    <span className="text-sand">{deal.price || "Today"}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center gap-2">
+              {heroDeals.map((deal, index) => (
+                <button
+                  key={`${deal.image}-${index}`}
+                  type="button"
+                  onClick={() => setActiveDeal(index)}
+                  className={`h-2.5 rounded-full transition ${
+                    activeDeal === index ? "w-9 bg-sand" : "w-2.5 bg-white/35 hover:bg-white/70"
+                  }`}
+                  aria-label={`Show deal ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
     </section>
   );
 }
@@ -1556,15 +1673,15 @@ function FeaturedMenu({
     <motion.section
       id="menu"
       ref={sectionRef}
-      className={`relative isolate overflow-hidden bg-[#fbfaf6] ${
-        settings.sectionSpacing === "compact" ? "py-8 sm:py-14" : "py-10 sm:py-20"
+      className={`body-glass-section relative isolate overflow-hidden ${
+        settings.sectionSpacing === "compact" ? "py-8 sm:py-12" : "py-10 sm:py-16"
       }`}
       initial={reduceMotion ? false : { opacity: 0, y: 34, filter: "blur(6px)" }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, amount: 0.12 }}
       transition={{ duration: 0.85, ease: smoothEase }}
     >
-      <div className="absolute inset-0 -z-20 bg-[linear-gradient(115deg,rgba(255,250,242,0.96),rgba(255,255,255,0.88)),linear-gradient(90deg,rgba(33,110,130,0.09)_0_1px,transparent_1px_100%),linear-gradient(0deg,rgba(200,75,55,0.08)_0_1px,transparent_1px_100%)] bg-[length:auto,72px_72px,72px_72px]" />
+      <div className="glass-section-bg absolute inset-0 -z-20" />
       <motion.img
         aria-hidden="true"
         src="/uploads/south-pizza-photo-24.jpg"
@@ -1801,7 +1918,7 @@ function MealSuggestionsSection({ onOrderClick }) {
     "Try a hot pizza with garlic bread and cold drinks for an easy first South Pizza order.";
 
   return (
-    <SectionReveal id="meal-ideas" className="bg-white py-20">
+    <SectionReveal id="meal-ideas" className="body-glass-section py-16 sm:py-20">
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
@@ -1879,7 +1996,7 @@ function MealSuggestionsSection({ onOrderClick }) {
 
 function AboutSection() {
   return (
-    <SectionReveal id="about" className="bg-white py-20">
+    <SectionReveal id="about" className="body-glass-section py-16 sm:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
         <motion.div
           className="relative overflow-hidden rounded-lg"
@@ -1983,7 +2100,7 @@ function SpecialsSection({ specialsList = specials, onOrderClick }) {
   const visibleSpecials = editableList(specialsList, specials);
 
   return (
-    <SectionReveal id="specials" className="specials-section scroll-mt-28 bg-[#eef6f3] py-20">
+    <SectionReveal id="specials" className="specials-section body-glass-section scroll-mt-28 py-16 sm:py-20">
       <div className="section-shell">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div>
@@ -2039,7 +2156,7 @@ function GallerySection({ selectedImage, setSelectedImage, galleryItems = galler
     selectedImage !== null ? visibleImages[selectedImage] : null;
 
   return (
-    <SectionReveal id="gallery" className="bg-white py-20">
+    <SectionReveal id="gallery" className="body-glass-section py-16 sm:py-20">
       <div className="section-shell">
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div>
@@ -2157,7 +2274,7 @@ function TestimonialsSection() {
   const current = testimonials[index];
 
   return (
-    <SectionReveal id="reviews" className="bg-ivory py-20">
+    <SectionReveal id="reviews" className="body-glass-section py-16 sm:py-20">
       <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
         <div>
           <p className="section-kicker">Testimonials</p>
@@ -2308,7 +2425,7 @@ function LocationContact({
   const visibleHours = formatHoursRows(schedule);
 
   return (
-    <SectionReveal id="visit" className="bg-white py-20">
+    <SectionReveal id="visit" className="body-glass-section py-16 sm:py-20">
       <div className="section-shell">
         <div className="max-w-3xl">
           <p className="section-kicker">Location & Contact</p>
@@ -2545,7 +2662,7 @@ function CompactHomeTabs({
   }
 
   return (
-    <section id="explore" className="bg-ivory">
+    <section id="explore" className="body-glass-shell relative isolate overflow-hidden bg-ivory">
       <HomeSectionNav activeTab={safeActiveTab} onNavigate={handleSectionNav} />
       <div
         id={`homepage-panel-${safeActiveTab}`}
