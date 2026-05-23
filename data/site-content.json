@@ -1,170 +1,26 @@
 {
   "hero": {
-    "headline": "South Pizza in Port Elgin",
-    "subheadline": "Stone-baked pizzas, Indian-inspired favourites, sides, ice cream, and cold drinks for beach days, family takeout, and easy local dinners.",
-    "tabKicker": "Order, browse, or plan your visit",
-    "tabHeadline": "Everything you need, right where you need it."
+    "headline": "",
+    "subheadline": "",
+    "tabKicker": "",
+    "tabHeadline": ""
   },
   "topDeals": [
     {
-      "eyebrow": "Top Deal",
-      "title": "Beach Day Pizza Combo",
-      "price": "From $24.99",
-      "description": "A customer-friendly combo with a hot pizza, garlic bread, and cold drinks for an easy beach-day meal.",
-      "image": "/uploads/af0d71ff-caad-4a48-975a-d022902bcd5a.jpg"
+      "eyebrow": "fresh puffs",
+      "title": "",
+      "price": "",
+      "description": "",
+      "image": "/uploads/a72d44ed-63a7-4e4a-8c8a-0235af77db7a.jpg"
     },
     {
-      "eyebrow": "Family Favourite",
-      "title": "Family Takeout Night",
-      "price": "Order Online",
-      "description": "Build a larger order with pizza, fries, sides, and a 2L drink for the whole table.",
-      "image": "/uploads/165f1a17-d804-4500-b988-9070c4027a08.jpg"
-    },
-    {
-      "eyebrow": "Lunch Pick",
-      "title": "Quick Slice & Drink",
-      "price": "Ask Today",
-      "description": "A simple lunch stop for locals, seniors, and visitors who want clear choices and fast service.",
-      "image": "/uploads/south-pizza-photo-03.jpg"
-    }
-  ],
-  "specials": [
-    {
-      "title": "Daily Pizza Feature",
-      "price": "from $14.99",
-      "description": "Rotating house pizzas such as Tandoori Paneer, Spicy Butter Paneer, Greek, and Margherita.",
-      "tag": "Daily"
-    },
-    {
-      "title": "Beach Lunch Combo",
+      "eyebrow": "Shawarma Pizza",
+      "title": "",
       "price": "Ask today",
-      "description": "A quick lunch pairing with a hot slice, a simple side, and a cold drink.",
-      "tag": "Lunch"
-    },
-    {
-      "title": "Senior-Friendly Deal",
-      "price": "Ask in store",
-      "description": "Easy portions, clear pricing, and staff help for guests who prefer a simple order.",
-      "tag": "Community"
-    },
-    {
-      "title": "Family Takeout Night",
-      "price": "Order online",
-      "description": "Build a larger order with pizza, garlic bread, fries, and 2L drinks.",
-      "tag": "Takeout"
+      "description": "",
+      "image": "/uploads/79232937-b4e6-4667-a324-00ea81e78aa7.jpg"
     }
   ],
-  "galleryImages": [
-    {
-      "src": "/uploads/south-pizza-photo-29.jpg",
-      "alt": "Fresh pizza served on a warm restaurant table",
-      "title": "Handcrafted pizza"
-    },
-    {
-      "src": "/uploads/south-pizza-photo-30.jpg",
-      "alt": "Sunny beach shoreline near blue water",
-      "title": "Beach-side mood"
-    },
-    {
-      "src": "/uploads/south-pizza-photo-31.jpg",
-      "alt": "Warm cafe interior with wood tables",
-      "title": "Cafe warmth"
-    },
-    {
-      "src": "/uploads/south-pizza-photo-32.jpg",
-      "alt": "Coffee prepared at a cafe counter",
-      "title": "Fresh coffee"
-    },
-    {
-      "src": "/uploads/south-pizza-photo-33.jpg",
-      "alt": "Friends enjoying food at a restaurant table",
-      "title": "Friendly visits"
-    },
-    {
-      "src": "/uploads/south-pizza-photo-34.jpg",
-      "alt": "Ice cream scoops for dessert",
-      "title": "Summer dessert"
-    }
-  ],
-  "storeStatus": {
-    "mode": "auto",
-    "openLabel": "Open now",
-    "openDetail": "Taking orders today",
-    "closedLabel": "Closed now",
-    "closedDetail": "Please check today's hours"
-  },
-  "weeklyHours": [
-    {
-      "id": "Sun",
-      "day": "Sunday",
-      "shortDay": "Sun",
-      "open": "11:00",
-      "close": "22:00",
-      "closed": false
-    },
-    {
-      "id": "Mon",
-      "day": "Monday",
-      "shortDay": "Mon",
-      "open": "11:00",
-      "close": "22:00",
-      "closed": false
-    },
-    {
-      "id": "Tue",
-      "day": "Tuesday",
-      "shortDay": "Tue",
-      "open": "11:00",
-      "close": "22:00",
-      "closed": false
-    },
-    {
-      "id": "Wed",
-      "day": "Wednesday",
-      "shortDay": "Wed",
-      "open": "11:00",
-      "close": "22:00",
-      "closed": false
-    },
-    {
-      "id": "Thu",
-      "day": "Thursday",
-      "shortDay": "Thu",
-      "open": "11:00",
-      "close": "23:00",
-      "closed": false
-    },
-    {
-      "id": "Fri",
-      "day": "Friday",
-      "shortDay": "Fri",
-      "open": "11:00",
-      "close": "24:00",
-      "closed": false
-    },
-    {
-      "id": "Sat",
-      "day": "Saturday",
-      "shortDay": "Sat",
-      "open": "11:00",
-      "close": "24:00",
-      "closed": false
-    }
-  ],
-  "layout": {
-    "defaultTheme": "system",
-    "heroMode": "slideshow",
-    "heroTextAlign": "left",
-    "heroOverlay": "strong",
-    "menuDensity": "compact",
-    "sectionSpacing": "compact",
-    "showDough": true,
-    "showSpecials": true,
-    "showGallery": true,
-    "showVisit": true,
-    "showMax": true,
-    "showFloatingOrder": true
-  },
   "orderCategoryTiles": [
     {
       "id": "customize",
@@ -233,6 +89,7 @@
   ],
   "menuItems": [
     {
+      "wooId": 4655,
       "category": "pizza",
       "name": "BBQ Chicken Pizza",
       "price": "$14.99",
@@ -266,10 +123,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/BBQ-Chicken-Pizza.png?fit=500%2C500&ssl=1",
       "alt": "BBQ-Chicken-Pizza.png",
       "sourceUrl": "https://southpizza.ca/product/bbq-chicken-pizza/",
-      "sku": "SP07",
-      "wooId": 4655
+      "sku": "SP07"
     },
     {
+      "wooId": 4663,
       "category": "pizza",
       "name": "Butter Chicken Pizza",
       "price": "$14.99",
@@ -303,10 +160,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/South-Pizza-3.png?fit=1000%2C1000&ssl=1",
       "alt": "butter chicken pizza",
       "sourceUrl": "https://southpizza.ca/product/butter-chicken-pizza/",
-      "sku": "SP22",
-      "wooId": 4663
+      "sku": "SP22"
     },
     {
+      "wooId": 4768,
       "category": "pizza",
       "name": "Canadian Classic Pizza",
       "price": "$14.99",
@@ -340,10 +197,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/canadian-classic.png?fit=1000%2C1000&ssl=1",
       "alt": "canadian classic",
       "sourceUrl": "https://southpizza.ca/product/canadian-classic-pizza/",
-      "sku": "SP02",
-      "wooId": 4768
+      "sku": "SP02"
     },
     {
+      "wooId": 4652,
       "category": "pizza",
       "name": "Chicken Supreme Pizza",
       "price": "$14.99",
@@ -377,10 +234,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Chicken-Supreme-Pizza-2.png?fit=1000%2C1000&ssl=1",
       "alt": "Chicken supreme pizza",
       "sourceUrl": "https://southpizza.ca/product/chicken-supreme-pizza/",
-      "sku": "SP05",
-      "wooId": 4652
+      "sku": "SP05"
     },
     {
+      "wooId": 4662,
       "category": "pizza",
       "name": "Chicken Tikka Pizza",
       "price": "$14.99",
@@ -414,10 +271,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Paneer-chicken-tikka-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/chicken-tikka-pizza/",
-      "sku": "SP21",
-      "wooId": 4662
+      "sku": "SP21"
     },
     {
+      "wooId": 4666,
       "category": "pizza",
       "name": "Corn Cheese Pizza",
       "price": "$14.99",
@@ -451,10 +308,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/corn-chese-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/corn-cheese-pizza/",
-      "sku": "SP25",
-      "wooId": 4666
+      "sku": "SP25"
     },
     {
+      "wooId": 4658,
       "category": "pizza",
       "name": "Create your Own Pizza",
       "price": "$11.99",
@@ -490,10 +347,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/southpizzadish.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/create-your-own-pizza/",
-      "sku": "SP19",
-      "wooId": 4658
+      "sku": "SP19"
     },
     {
+      "wooId": 4769,
       "category": "pizza",
       "name": "Deluxe Pizza",
       "price": "$14.99",
@@ -527,10 +384,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Deluxe-pizza.png?fit=1000%2C1000&ssl=1",
       "alt": "Deluxe pizza",
       "sourceUrl": "https://southpizza.ca/product/deluxe-pizza/",
-      "sku": "SP04",
-      "wooId": 4769
+      "sku": "SP04"
     },
     {
+      "wooId": 4669,
       "category": "pizza",
       "name": "Double Cheese",
       "price": "$14.99",
@@ -564,10 +421,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/double-cheese-pizza-1.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/double-cheese/",
-      "sku": "SP28",
-      "wooId": 4669
+      "sku": "SP28"
     },
     {
+      "wooId": 4656,
       "category": "pizza",
       "name": "Double Cheese Pizza",
       "price": "$14.99",
@@ -601,10 +458,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Double-Cheese-Pizza.png?fit=500%2C500&ssl=1",
       "alt": "Double-Cheese-Pizza.png",
       "sourceUrl": "https://southpizza.ca/product/double-cheese-pizza/",
-      "sku": "SP08",
-      "wooId": 4656
+      "sku": "SP08"
     },
     {
+      "wooId": 4802,
       "category": "pizza",
       "name": "Fiery Fusion Veg",
       "price": "$14.99",
@@ -638,10 +495,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fiery-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/fiery-fusion-veg/",
-      "sku": "SP101",
-      "wooId": 4802
+      "sku": "SP101"
     },
     {
+      "wooId": 4811,
       "category": "pizza",
       "name": "Gluten Free Pizza (special)",
       "price": "$14.99",
@@ -676,10 +533,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Gulten-Pizza.png?fit=1000%2C1000&ssl=1",
       "alt": "Gulten Pizza",
       "sourceUrl": "https://southpizza.ca/product/gluten-free-pizza-special/",
-      "sku": "SP105",
-      "wooId": 4811
+      "sku": "SP105"
     },
     {
+      "wooId": 4668,
       "category": "pizza",
       "name": "Greek Pizza",
       "price": "$14.99",
@@ -713,10 +570,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/greek-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/greek-pizza/",
-      "sku": "SP27",
-      "wooId": 4668
+      "sku": "SP27"
     },
     {
+      "wooId": 4661,
       "category": "pizza",
       "name": "Hawaiian Pizza",
       "price": "$14.99",
@@ -750,10 +607,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Hawaiin-1.png?fit=1000%2C1000&ssl=1",
       "alt": "Hawaiin",
       "sourceUrl": "https://southpizza.ca/product/hawaiian-pizza/",
-      "sku": "SP20",
-      "wooId": 4661
+      "sku": "SP20"
     },
     {
+      "wooId": 4667,
       "category": "pizza",
       "name": "Margherita Pizza",
       "price": "$14.99",
@@ -787,10 +644,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/margarita-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/margarita-pizza/",
-      "sku": "SP26",
-      "wooId": 4667
+      "sku": "SP26"
     },
     {
+      "wooId": 4653,
       "category": "pizza",
       "name": "Meat Club Pizza",
       "price": "$14.99",
@@ -824,10 +681,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Meat-Club-Pizza-1.png?fit=1000%2C1000&ssl=1",
       "alt": "Meat club pizza",
       "sourceUrl": "https://southpizza.ca/product/meat-club-pizza/",
-      "sku": "SP06",
-      "wooId": 4653
+      "sku": "SP06"
     },
     {
+      "wooId": 5242,
       "category": "pizza",
       "name": "Paneer Tikka Pizza",
       "price": "$14.99",
@@ -861,10 +718,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Paneer-chicken-tikka-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/paneer-tikka-pizza/",
-      "sku": "SP21-1",
-      "wooId": 5242
+      "sku": "SP21-1"
     },
     {
+      "wooId": 4767,
       "category": "pizza",
       "name": "Pepperoni Pizza",
       "price": "$14.99",
@@ -898,10 +755,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Pepperoni-Pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/pepperoni-pizza/",
-      "sku": "SP100",
-      "wooId": 4767
+      "sku": "SP100"
     },
     {
+      "wooId": 4654,
       "category": "pizza",
       "name": "Spicy & Butter Paneer Pizza",
       "price": "$14.99",
@@ -935,10 +792,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/spicy-butter-paneer.png?fit=1000%2C1000&ssl=1",
       "alt": "spicy butter paneer",
       "sourceUrl": "https://southpizza.ca/product/spicy-butter-paneer-pizza/",
-      "sku": "SP09",
-      "wooId": 4654
+      "sku": "SP09"
     },
     {
+      "wooId": 4664,
       "category": "pizza",
       "name": "Tandoori Chicken Pizza",
       "price": "$14.99",
@@ -972,10 +829,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Tandoori-chicken-pizza.png?fit=1000%2C1000&ssl=1",
       "alt": "Tandoori chicken pizza",
       "sourceUrl": "https://southpizza.ca/product/tandoori-paneer-chicken-pizza/",
-      "sku": "SP23",
-      "wooId": 4664
+      "sku": "SP23"
     },
     {
+      "wooId": 5248,
       "category": "pizza",
       "name": "Tandoori Paneer Pizza",
       "price": "$14.99",
@@ -1009,10 +866,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/tandoori-chichek-pizza.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/tandoori-paneer-pizza/",
-      "sku": "SP23-1",
-      "wooId": 5248
+      "sku": "SP23-1"
     },
     {
+      "wooId": 4670,
       "category": "pizza",
       "name": "Vegan Cheese Pizza (special)",
       "price": "$14.99",
@@ -1047,10 +904,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Vegan-Cheese-Pizza-special.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/vegan-cheese-pizza-special/",
-      "sku": "SP30",
-      "wooId": 4670
+      "sku": "SP30"
     },
     {
+      "wooId": 4770,
       "category": "pizza",
       "name": "Veggie Fans Pizza",
       "price": "$14.99",
@@ -1084,10 +941,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Veggie-Fans-Pizza.png?fit=500%2C500&ssl=1",
       "alt": "Veggie-Fans-Pizza.png",
       "sourceUrl": "https://southpizza.ca/product/veggie-fans-pizza/",
-      "sku": "SP03",
-      "wooId": 4770
+      "sku": "SP03"
     },
     {
+      "wooId": 5096,
       "category": "sides",
       "name": "Cauliflower Bites (300 gm)",
       "price": "$12.99",
@@ -1109,10 +966,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/Untitled-design-1.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/cauliflower-bites-300-gm/",
-      "sku": "SP305",
-      "wooId": 5096
+      "sku": "SP305"
     },
     {
+      "wooId": 5078,
       "category": "sides",
       "name": "Chicken Tikka",
       "price": "$15.99",
@@ -1142,10 +999,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-03-at-9.56.08-PM.jpeg?fit=1600%2C1226&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/chicken-tikka-thighs/",
-      "sku": "SP301",
-      "wooId": 5078
+      "sku": "SP301"
     },
     {
+      "wooId": 5077,
       "category": "sides",
       "name": "Fish Tikka",
       "price": "$15.99",
@@ -1175,10 +1032,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fish-tikka.jpeg?fit=1520%2C1600&ssl=1",
       "alt": "fish tikka",
       "sourceUrl": "https://southpizza.ca/product/fish-tikka/",
-      "sku": "SP300",
-      "wooId": 5077
+      "sku": "SP300"
     },
     {
+      "wooId": 5080,
       "category": "sides",
       "name": "Fries",
       "price": "$4.89 - $6.99",
@@ -1203,10 +1060,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/fries.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/fries/",
-      "sku": "SP307",
-      "wooId": 5080
+      "sku": "SP307"
     },
     {
+      "wooId": 3792,
       "category": "sides",
       "name": "Garlic Bread",
       "price": "$2.49 - $4.49",
@@ -1232,10 +1089,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Garlic-Bread.png?fit=500%2C500&ssl=1",
       "alt": "Garlic-Bread.png",
       "sourceUrl": "https://southpizza.ca/product/garlic-bread-4/",
-      "sku": "SP15",
-      "wooId": 3792
+      "sku": "SP15"
     },
     {
+      "wooId": 3791,
       "category": "sides",
       "name": "Italian Cheese Sticks (10 Sticks)",
       "price": "$10.99",
@@ -1257,10 +1114,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/22G-Tarp.png?fit=810%2C810&ssl=1",
       "alt": "22G-Tarp.png",
       "sourceUrl": "https://southpizza.ca/product/italian-cheese-sticks/",
-      "sku": "SP14",
-      "wooId": 3791
+      "sku": "SP14"
     },
     {
+      "wooId": 5097,
       "category": "sides",
       "name": "Jalapeno Poppers (8 pieces)",
       "price": "$13.99",
@@ -1281,10 +1138,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/South-Pizza-3.png?fit=1080%2C1080&ssl=1",
       "alt": "South Pizza (3)",
       "sourceUrl": "https://southpizza.ca/product/jalapeno-poppers-6-pieces/",
-      "sku": "SP306",
-      "wooId": 5097
+      "sku": "SP306"
     },
     {
+      "wooId": 5089,
       "category": "sides",
       "name": "Lahori Fish Fried (1 LB)",
       "price": "$13.99",
@@ -1306,10 +1163,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/lahori-fish.jpeg?fit=1562%2C1600&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/lahori-fish-fried-1-lb/",
-      "sku": "SP302",
-      "wooId": 5089
+      "sku": "SP302"
     },
     {
+      "wooId": 5200,
       "category": "sides",
       "name": "Paneer Tikka (12 Pcs)",
       "price": "$13.99",
@@ -1332,10 +1189,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/paneer-tikka.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/paneer-tikka/",
-      "sku": "SP302-1",
-      "wooId": 5200
+      "sku": "SP302-1"
     },
     {
+      "wooId": 3789,
       "category": "sides",
       "name": "Samosas – 2 Pieces",
       "price": "$5.00",
@@ -1358,10 +1215,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/10/Samosas.png?fit=500%2C500&ssl=1",
       "alt": "Samosas.png",
       "sourceUrl": "https://southpizza.ca/product/samosas/",
-      "sku": "SP11",
-      "wooId": 3789
+      "sku": "SP11"
     },
     {
+      "wooId": 5090,
       "category": "sides",
       "name": "Tandoori Leg & Thigh (Bone-in)",
       "price": "$15.99",
@@ -1391,10 +1248,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/WhatsApp-Image-2025-11-03-at-9.55.21-PM.jpeg?fit=1438%2C1600&ssl=1",
       "alt": "WhatsApp Image 2025-11-03 at 9.55.21 PM",
       "sourceUrl": "https://southpizza.ca/product/tandoori-leg-bone-in-chicken/",
-      "sku": "SP303",
-      "wooId": 5090
+      "sku": "SP303"
     },
     {
+      "wooId": 5079,
       "category": "sides",
       "name": "Wings",
       "price": "$10.99",
@@ -1452,10 +1309,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/chicken-wings.png?fit=500%2C500&ssl=1",
       "alt": "south pizza, pizza in port elgin, best pizza in port elgin, best pizza in elgin, port elgin pizza, pizza near port elgin",
       "sourceUrl": "https://southpizza.ca/product/wings/",
-      "sku": "SP304",
-      "wooId": 5079
+      "sku": "SP304"
     },
     {
+      "wooId": 6030,
       "category": "drinks",
       "name": "A&W Root Beer (500ml)",
       "price": "$2.99",
@@ -1476,10 +1333,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/aw500.png?fit=1080%2C1080&ssl=1",
       "alt": "aw500",
       "sourceUrl": "https://southpizza.ca/product/aw-root-beer-500ml/",
-      "sku": "SPB004",
-      "wooId": 6030
+      "sku": "SPB004"
     },
     {
+      "wooId": 6032,
       "category": "drinks",
       "name": "Canada Dry Ginger-Ale (500ml)",
       "price": "$2.99",
@@ -1500,10 +1357,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Canada-Dry-Ginger.png?fit=1080%2C1080&ssl=1",
       "alt": "Canada Dry Ginger",
       "sourceUrl": "https://southpizza.ca/product/canada-dry-ginger-ale-500ml/",
-      "sku": "SPB006",
-      "wooId": 6032
+      "sku": "SPB006"
     },
     {
+      "wooId": 6027,
       "category": "drinks",
       "name": "Coca Cola (500ml)",
       "price": "$3.99",
@@ -1524,10 +1381,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coca.png?fit=1080%2C1080&ssl=1",
       "alt": "coca",
       "sourceUrl": "https://southpizza.ca/product/coca-cola-500ml/",
-      "sku": "SPB001",
-      "wooId": 6027
+      "sku": "SPB001"
     },
     {
+      "wooId": 6028,
       "category": "drinks",
       "name": "Coca Cola Diet (500ml)",
       "price": "$3.99",
@@ -1548,10 +1405,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coke.png?fit=1080%2C1080&ssl=1",
       "alt": "coke",
       "sourceUrl": "https://southpizza.ca/product/coca-cola-diet-500ml/",
-      "sku": "SPB002",
-      "wooId": 6028
+      "sku": "SPB002"
     },
     {
+      "wooId": 6043,
       "category": "drinks",
       "name": "Coca Cola Diet Pop (2L)",
       "price": "$5.99",
@@ -1572,10 +1429,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/cokediet.png?fit=1080%2C1080&ssl=1",
       "alt": "cokediet",
       "sourceUrl": "https://southpizza.ca/product/coca-cola-diet-pop-2l/",
-      "sku": "SPB018",
-      "wooId": 6043
+      "sku": "SPB018"
     },
     {
+      "wooId": 6044,
       "category": "drinks",
       "name": "Coca Cola Regular Pop (2L)",
       "price": "$5.99",
@@ -1596,10 +1453,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coke2l.png?fit=1080%2C1080&ssl=1",
       "alt": "coke2l",
       "sourceUrl": "https://southpizza.ca/product/coca-cola-regular-pop-2l/",
-      "sku": "SPB019",
-      "wooId": 6044
+      "sku": "SPB019"
     },
     {
+      "wooId": 6029,
       "category": "drinks",
       "name": "Coca Cola Zero (500ml)",
       "price": "$3.99",
@@ -1620,10 +1477,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/coca0.png?fit=1080%2C1080&ssl=1",
       "alt": "coca0",
       "sourceUrl": "https://southpizza.ca/product/coca-cola-zero-500ml/",
-      "sku": "SPB003",
-      "wooId": 6029
+      "sku": "SPB003"
     },
     {
+      "wooId": 6038,
       "category": "drinks",
       "name": "Dragonfruit Vitamin Water (591ml)",
       "price": "$3.99",
@@ -1644,10 +1501,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/dragonfruit.png?fit=1080%2C1080&ssl=1",
       "alt": "dragonfruit",
       "sourceUrl": "https://southpizza.ca/product/dragonfruit-vitamin-water-591ml/",
-      "sku": "SPB012",
-      "wooId": 6038
+      "sku": "SPB012"
     },
     {
+      "wooId": 6031,
       "category": "drinks",
       "name": "Fanta (500ml)",
       "price": "$2.99",
@@ -1668,10 +1525,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Fanta.png?fit=1080%2C1080&ssl=1",
       "alt": "Fanta",
       "sourceUrl": "https://southpizza.ca/product/fanta-500ml/",
-      "sku": "SPB005",
-      "wooId": 6031
+      "sku": "SPB005"
     },
     {
+      "wooId": 6034,
       "category": "drinks",
       "name": "Fuze Lemon Iced Tea (500ml)",
       "price": "$3.99",
@@ -1692,10 +1549,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/fuze.png?fit=1080%2C1080&ssl=1",
       "alt": "fuze",
       "sourceUrl": "https://southpizza.ca/product/fuze-lemon-iced-tea-500ml/",
-      "sku": "SPB008",
-      "wooId": 6034
+      "sku": "SPB008"
     },
     {
+      "wooId": 6035,
       "category": "drinks",
       "name": "Fuze Lemon Iced Tea Zero Sugar (500ml)",
       "price": "$3.99",
@@ -1716,10 +1573,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/fuze0.png?fit=1080%2C1080&ssl=1",
       "alt": "fuze0",
       "sourceUrl": "https://southpizza.ca/product/fuze-lemon-iced-tea-zero-sugar-500ml/",
-      "sku": "SPB009",
-      "wooId": 6035
+      "sku": "SPB009"
     },
     {
+      "wooId": 6039,
       "category": "drinks",
       "name": "Kiwi strawberry Vitamin Water (591ml)",
       "price": "$3.99",
@@ -1740,10 +1597,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/kiwi.png?fit=1080%2C1080&ssl=1",
       "alt": "kiwi",
       "sourceUrl": "https://southpizza.ca/product/kiwi-strawberry-vitamin-water-591ml/",
-      "sku": "SPB013",
-      "wooId": 6039
+      "sku": "SPB013"
     },
     {
+      "wooId": 6040,
       "category": "drinks",
       "name": "Monster Energy Drink (473ml)",
       "price": "$4.99",
@@ -1764,10 +1621,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/monster.png?fit=1080%2C1080&ssl=1",
       "alt": "monster",
       "sourceUrl": "https://southpizza.ca/product/monster-energy-drink-473ml/",
-      "sku": "SPB014",
-      "wooId": 6040
+      "sku": "SPB014"
     },
     {
+      "wooId": 6041,
       "category": "drinks",
       "name": "Monster Zero-Ultra Energy Drink (473ml)",
       "price": "$4.99",
@@ -1788,10 +1645,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/monsterzero.png?fit=1080%2C1080&ssl=1",
       "alt": "monsterzero",
       "sourceUrl": "https://southpizza.ca/product/monster-zero-ultra-energy-drink-473ml/",
-      "sku": "SPB015",
-      "wooId": 6041
+      "sku": "SPB015"
     },
     {
+      "wooId": 6037,
       "category": "drinks",
       "name": "Orange Vitamin Water (591ml)",
       "price": "$3.99",
@@ -1812,10 +1669,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/orange.png?fit=1080%2C1080&ssl=1",
       "alt": "orange",
       "sourceUrl": "https://southpizza.ca/product/orange-vitamin-water-591ml/",
-      "sku": "SPB011",
-      "wooId": 6037
+      "sku": "SPB011"
     },
     {
+      "wooId": 6036,
       "category": "drinks",
       "name": "Smart Water (500ml)",
       "price": "$3.99",
@@ -1836,10 +1693,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/smart.png?fit=1080%2C1080&ssl=1",
       "alt": "smart",
       "sourceUrl": "https://southpizza.ca/product/smart-water-500ml/",
-      "sku": "SPB010",
-      "wooId": 6036
+      "sku": "SPB010"
     },
     {
+      "wooId": 6033,
       "category": "drinks",
       "name": "Sprite (500ml)",
       "price": "$2.99",
@@ -1860,10 +1717,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/Sprite.png?fit=1080%2C1080&ssl=1",
       "alt": "Sprite",
       "sourceUrl": "https://southpizza.ca/product/sprite-500ml/",
-      "sku": "SPB007",
-      "wooId": 6033
+      "sku": "SPB007"
     },
     {
+      "wooId": 6042,
       "category": "drinks",
       "name": "Sprite Pop (2L)",
       "price": "$5.79",
@@ -1884,10 +1741,10 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2026/01/sprite2l.png?fit=1080%2C1080&ssl=1",
       "alt": "sprite2l",
       "sourceUrl": "https://southpizza.ca/product/sprite-pop-2l/",
-      "sku": "SPB016",
-      "wooId": 6042
+      "sku": "SPB016"
     },
     {
+      "wooId": 4872,
       "category": "dessert",
       "name": "Scoopy Ice Cream",
       "price": "Ask in store",
@@ -1908,8 +1765,7 @@
       "image": "https://i0.wp.com/southpizza.ca/wp-content/uploads/2025/11/SCOOPY-ICE-CREAM.png?fit=500%2C500&ssl=1",
       "alt": "Scoopy Ice Cream,",
       "sourceUrl": "https://southpizza.ca/product/scoopy-ice-cream/",
-      "sku": "SP12-1",
-      "wooId": 4872
+      "sku": "SP12-1"
     }
   ],
   "customizationOptions": [
@@ -2061,5 +1917,142 @@
       "label": "Jalapeno dip",
       "price": 0.99
     }
-  ]
+  ],
+  "specials": [
+    {
+      "title": "Daily Pizza Feature",
+      "price": "from $14.99",
+      "description": "Rotating house pizzas such as Tandoori Paneer, Spicy Butter Paneer, Greek, and Margherita.",
+      "tag": "Daily"
+    },
+    {
+      "title": "Beach Lunch Combo",
+      "price": "Ask today",
+      "description": "A quick lunch pairing with a hot slice, a simple side, and a cold drink.",
+      "tag": "Lunch"
+    },
+    {
+      "title": "Senior-Friendly Deal",
+      "price": "Ask in store",
+      "description": "Easy portions, clear pricing, and staff help for guests who prefer a simple order.",
+      "tag": "Community"
+    },
+    {
+      "title": "Family Takeout Night",
+      "price": "Order online",
+      "description": "Build a larger order with pizza, garlic bread, fries, and 2L drinks.",
+      "tag": "Takeout"
+    }
+  ],
+  "galleryImages": [
+    {
+      "src": "/uploads/south-pizza-photo-29.jpg",
+      "alt": "Fresh pizza served on a warm restaurant table",
+      "title": "Handcrafted pizza"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-30.jpg",
+      "alt": "Sunny beach shoreline near blue water",
+      "title": "Beach-side mood"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-31.jpg",
+      "alt": "Warm cafe interior with wood tables",
+      "title": "Cafe warmth"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-32.jpg",
+      "alt": "Coffee prepared at a cafe counter",
+      "title": "Fresh coffee"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-33.jpg",
+      "alt": "Friends enjoying food at a restaurant table",
+      "title": "Friendly visits"
+    },
+    {
+      "src": "/uploads/south-pizza-photo-34.jpg",
+      "alt": "Ice cream scoops for dessert",
+      "title": "Summer dessert"
+    }
+  ],
+  "storeStatus": {
+    "mode": "auto",
+    "openLabel": "Open now",
+    "openDetail": "Taking orders today",
+    "closedLabel": "Closed now",
+    "closedDetail": "Please check today's hours"
+  },
+  "weeklyHours": [
+    {
+      "id": "Sun",
+      "day": "Sunday",
+      "shortDay": "Sun",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Mon",
+      "day": "Monday",
+      "shortDay": "Mon",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Tue",
+      "day": "Tuesday",
+      "shortDay": "Tue",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Wed",
+      "day": "Wednesday",
+      "shortDay": "Wed",
+      "open": "11:00",
+      "close": "22:00",
+      "closed": false
+    },
+    {
+      "id": "Thu",
+      "day": "Thursday",
+      "shortDay": "Thu",
+      "open": "11:00",
+      "close": "23:00",
+      "closed": false
+    },
+    {
+      "id": "Fri",
+      "day": "Friday",
+      "shortDay": "Fri",
+      "open": "11:00",
+      "close": "24:00",
+      "closed": false
+    },
+    {
+      "id": "Sat",
+      "day": "Saturday",
+      "shortDay": "Sat",
+      "open": "11:00",
+      "close": "24:00",
+      "closed": false
+    }
+  ],
+  "layout": {
+    "defaultTheme": "system",
+    "heroMode": "slideshow",
+    "heroTextAlign": "left",
+    "heroOverlay": "strong",
+    "menuDensity": "compact",
+    "sectionSpacing": "comfortable",
+    "showDough": true,
+    "showSpecials": true,
+    "showGallery": true,
+    "showVisit": true,
+    "showMax": true,
+    "showFloatingOrder": true
+  }
 }

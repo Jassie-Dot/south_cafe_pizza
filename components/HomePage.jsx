@@ -45,15 +45,6 @@ const CART_STORAGE_KEY = "south-pizza-cart-v1";
 const ORDER_DRAFT_STORAGE_KEY = "south-pizza-order-draft-v1";
 const THEME_STORAGE_KEY = "south-pizza-theme-v1";
 
-const quickMenuFilters = [
-  { id: "all", label: "All styles", icon: "Sparkles" },
-  { id: "orderable", label: "Order online", icon: "ShoppingBag" },
-  { id: "veggie", label: "Vegetarian", icon: "Leaf" },
-  { id: "meat", label: "Meat", icon: "Drumstick" },
-  { id: "vegan", label: "Vegan", icon: "Sprout" },
-  { id: "gluten-free", label: "Gluten free", icon: "WheatOff" }
-];
-
 const aiWelcomeMessage = {
   role: "assistant",
   text: "Hi, I am Max. Ask me about menu picks, prices, hours, pickup, delivery, or what goes well with your order."
@@ -103,6 +94,16 @@ const homepageTabs = [
   { id: "story", label: "Story", href: "#about", icon: "Store" },
   { id: "reviews", label: "Reviews", href: "#reviews", icon: "Star" }
 ];
+
+const sectionNavIcons = {
+  "#menu": "Utensils",
+  "#specials": "BadgePercent",
+  "#about": "Store",
+  "#reviews": "Star",
+  "#gallery": "Images",
+  "#visit": "MapPin",
+  "/admin": "ShieldCheck"
+};
 
 const siteContentDefaults = {
   hero: heroContent,
@@ -668,31 +669,15 @@ function SiteHeader({
           <BrandLockup compact />
         </a>
 
-        <nav
-          aria-label="Primary navigation"
-          className="header-nav-glass hidden max-w-full min-w-0 flex-wrap items-center justify-center gap-1 justify-self-center rounded-full p-1 min-[1180px]:flex"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={(event) => handleNavClick(event, link)}
-              className="whitespace-nowrap rounded-full px-2.5 py-1.5 text-[0.82rem] font-black text-charcoal/80 transition hover:bg-white/70 hover:text-charcoal min-[1500px]:px-3.5 min-[1500px]:text-sm"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
         <div className="hidden min-w-0 items-center justify-self-end gap-2 min-[1180px]:flex">
           <ButtonAction
             onClick={onHotDealsClick}
             variant="outline"
             ariaLabel="Open South Pizza hot deals"
-            className="glass-button hidden !min-h-[46px] shrink-0 whitespace-nowrap !px-4 !py-2 !text-base min-[1500px]:inline-flex"
+            className="glass-button header-hot-deals-animate hidden !h-[46px] !min-h-[46px] !w-[46px] shrink-0 whitespace-nowrap !px-0 !py-2 !text-base min-[1180px]:inline-flex min-[1500px]:!w-auto min-[1500px]:!px-4"
           >
-            <Icon name="Flame" className="h-5 w-5" />
-            Hot Deals
+            <Icon name="Flame" className="relative z-[1] h-5 w-5" />
+            <span className="relative z-[1] hidden min-[1500px]:inline">Hot Deals</span>
           </ButtonAction>
           <div className="header-status-glass hidden min-h-[46px] min-w-[132px] shrink-0 items-center rounded-md px-3 text-sm font-bold text-charcoal min-[1700px]:flex">
             <span className="grid gap-0.5">
@@ -812,10 +797,10 @@ function SiteHeader({
                     onHotDealsClick?.();
                   }}
                   variant="outline"
-                  className="w-full sm:col-span-2"
+                  className="header-hot-deals-animate w-full sm:col-span-2"
                 >
-                  <Icon name="Flame" />
-                  Hot Deals
+                  <Icon name="Flame" className="relative z-[1]" />
+                  <span className="relative z-[1]">Hot Deals</span>
                 </ButtonAction>
               </div>
             </nav>
@@ -826,21 +811,12 @@ function SiteHeader({
   );
 }
 
-function Hero({
-  onOrderClick,
-  deals = topDeals,
-  layout = layoutSettings,
-  hero = heroContent,
-  statusSettings = storeStatusSettings,
-  schedule = weeklyHours
-}) {
+function Hero({ deals = topDeals, layout = layoutSettings }) {
   const reduceMotion = useReducedMotion();
-  const storeStatus = useStoreStatus(statusSettings, schedule);
   const [activeDeal, setActiveDeal] = useState(0);
   const settings = editableLayout(layout);
   const heroDeals = editableList(deals, topDeals);
   const currentDeal = heroDeals[activeDeal] || heroDeals[0] || topDeals[0];
-  const centerHero = settings.heroTextAlign === "center";
   const strongOverlay = settings.heroOverlay === "strong";
   const slideshowEnabled = settings.heroMode !== "static" && heroDeals.length > 1;
   const { scrollY } = useScroll();
@@ -889,58 +865,6 @@ function Hero({
         className="absolute inset-x-0 bottom-0 -z-10 h-28 bg-[linear-gradient(135deg,rgba(255,255,255,0.14)_0_10%,transparent_10%_20%,rgba(255,255,255,0.1)_20%_30%,transparent_30%_100%)]"
         aria-hidden="true"
       />
-
-      <div className={`section-shell flex min-h-[64svh] flex-col justify-center py-10 sm:py-12 ${centerHero ? "items-center text-center" : ""}`}>
-        <motion.div
-          className={`max-w-5xl ${centerHero ? "mx-auto" : ""}`}
-          initial={reduceMotion ? false : { opacity: 0, y: 28 }}
-          animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: smoothEase }}
-        >
-          <motion.div
-            className={`mb-6 inline-flex max-w-full flex-wrap items-center gap-3 rounded-md border border-white/25 bg-white/14 px-4 py-3 text-left backdrop-blur ${centerHero ? "justify-center" : ""}`}
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.94 }}
-            animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1, duration: 0.55, ease: smoothEase }}
-          >
-            <span
-              className={`h-3 w-3 rounded-full ${
-                storeStatus?.isOpen ? "bg-olive" : "bg-tomato"
-              }`}
-              aria-hidden="true"
-            />
-            <span className="text-base font-black uppercase leading-tight text-sand">
-              {storeStatus?.label || "Open daily"}
-            </span>
-            <span className="hidden h-5 w-px bg-white/30 sm:block" aria-hidden="true" />
-            <span className="text-base font-bold leading-tight text-white/85">
-              {storeStatus?.detail || "11:00 AM start"}
-            </span>
-          </motion.div>
-
-          <h1 className="max-w-5xl font-sans text-[3.15rem] font-black uppercase leading-[0.98] text-white sm:text-6xl md:text-7xl">
-            {hero.headline || heroContent.headline}
-          </h1>
-          <p className={`mt-6 max-w-3xl text-xl font-semibold leading-relaxed text-white/88 sm:text-2xl ${centerHero ? "mx-auto" : ""}`}>
-            {hero.subheadline || heroContent.subheadline}
-          </p>
-
-          <div className={`mt-9 flex flex-col gap-4 sm:flex-row ${centerHero ? "justify-center" : ""}`}>
-            <ButtonAction onClick={onOrderClick}>
-              <Icon name="ShoppingBag" />
-              Start Order
-            </ButtonAction>
-            <ButtonLink href="#menu" variant="secondary" className="sm:w-auto">
-              <Icon name="Utensils" />
-              View Menu
-            </ButtonLink>
-            <ButtonLink href={contact.phoneHref} variant="secondary" className="sm:w-auto">
-              <Icon name="Phone" />
-              Call
-            </ButtonLink>
-          </div>
-        </motion.div>
-      </div>
     </section>
   );
 }
@@ -1450,12 +1374,9 @@ function FeaturedMenu({
   const sectionRef = useRef(null);
   const resultsRef = useRef(null);
   const settings = editableLayout(layout);
-  const firstTile = categoryTiles[0] || orderCategoryTiles[0];
-  const [activeTileId, setActiveTileId] = useState(firstTile.id);
-  const [activeCategoryId, setActiveCategoryId] = useState(firstTile.category);
-  const [activeGroupFilter, setActiveGroupFilter] = useState(
-    firstTile.filter || "all"
-  );
+  const [activeTileId, setActiveTileId] = useState("");
+  const [activeCategoryId, setActiveCategoryId] = useState("all");
+  const [activeGroupFilter, setActiveGroupFilter] = useState("all");
   const [quickFilter, setQuickFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(0);
@@ -1468,10 +1389,10 @@ function FeaturedMenu({
   const pizzaScale = useTransform(scrollYProgress, [0, 1], [1.05, reduceMotion ? 1.05 : 1.18]);
   const miniPizzaY = useTransform(scrollYProgress, [0, 1], [reduceMotion ? 0 : 80, reduceMotion ? 0 : -80]);
 
-  const activeTile =
-    categoryTiles.find((tile) => tile.id === activeTileId) || categoryTiles[0] || orderCategoryTiles[0];
+  const activeTile = categoryTiles.find((tile) => tile.id === activeTileId);
   const activeCategory =
     menuCategories.find((category) => category.id === activeCategoryId) || menuCategories[0];
+  const hasMenuSelection = Boolean(activeTileId);
   const normalizedQuery = searchQuery.trim().toLowerCase();
   const pageSize = settings.menuDensity === "compact" ? 9 : 6;
   const visibleMenuCategories = useMemo(() => {
@@ -1545,39 +1466,6 @@ function FeaturedMenu({
     setActiveGroupFilter(tile.filter || "all");
     setQuickFilter("all");
     scrollToResults();
-  }
-
-  function chooseCategory(category) {
-    const matchingTile =
-      categoryTiles.find((tile) => tile.category === category.id && !tile.filter) ||
-      categoryTiles.find((tile) => tile.category === category.id);
-
-    setActiveCategoryId(category.id);
-    setActiveGroupFilter("all");
-    setActiveTileId(matchingTile?.id || "");
-    setQuickFilter("all");
-    scrollToResults();
-  }
-
-  function chooseQuickFilter(filterId) {
-    setQuickFilter(filterId);
-
-    if (filterId !== "all") {
-      setActiveGroupFilter("all");
-      setActiveTileId("");
-    }
-
-    scrollToResults();
-  }
-
-  function updateSearchQuery(value) {
-    setSearchQuery(value);
-
-    if (value.trim()) {
-      setActiveCategoryId("all");
-      setActiveGroupFilter("all");
-      setActiveTileId("");
-    }
   }
 
   function resetMenuFilters() {
@@ -1673,154 +1561,82 @@ function FeaturedMenu({
           })}
         </div>
 
-        <div className="mt-8 rounded-lg border border-charcoal/10 bg-white/[0.88] p-4 shadow-soft backdrop-blur">
-          <div className="flex flex-wrap gap-2" aria-label="Menu categories">
-            {visibleMenuCategories.map((category) => {
-              const active = activeCategoryId === category.id && activeGroupFilter === "all";
-              return (
+        {hasMenuSelection ? (
+          <>
+            <div ref={resultsRef} className="mt-10 scroll-mt-28 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+              <div>
+                <h3 className="font-sans text-[2.15rem] font-black uppercase leading-none text-charcoal sm:text-3xl md:text-4xl">
+                  {activeHeading}
+                </h3>
+                <p className="mt-3 text-xl font-bold leading-snug text-charcoal/65 sm:text-lg">{resultsLabel}</p>
+              </div>
+              <div className="hidden gap-3 sm:flex">
                 <button
-                  key={category.id}
                   type="button"
-                  onClick={() => chooseCategory(category)}
-                  className={`min-h-11 rounded-md border px-4 py-2 text-base font-black uppercase leading-tight transition ${
-                    active
-                      ? "border-ocean bg-ocean text-white"
-                      : "border-charcoal/15 bg-ivory text-charcoal hover:border-ocean hover:text-ocean"
-                  }`}
-                  aria-pressed={active}
+                  onClick={() => cyclePage(-1)}
+                  disabled={totalPages <= 1}
+                  className="tap-target inline-flex items-center justify-center rounded-md border-2 border-ocean bg-white text-ocean transition hover:bg-ocean hover:text-white"
+                  aria-label="Previous products"
                 >
-                  {category.label}
+                  <Icon name="ChevronLeft" className="h-7 w-7" />
                 </button>
-              );
-            })}
-          </div>
-
-          <div className="mt-4 grid gap-3">
-            <label className="relative block">
-              <span className="sr-only">Search the South Pizza menu</span>
-              <Icon
-                name="Search"
-                className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ocean"
-              />
-              <input
-                value={searchQuery}
-                onChange={(event) => updateSearchQuery(event.target.value)}
-                className="min-h-14 w-full rounded-md border border-charcoal/15 bg-white py-3 pl-12 pr-4 text-lg font-bold text-charcoal placeholder:text-charcoal/45"
-                placeholder="Search pizza, sides, drinks..."
-                type="search"
-              />
-            </label>
-
-            <div className="flex flex-wrap gap-2" aria-label="Menu quick filters">
-              {quickMenuFilters.map((filter) => {
-                const active = quickFilter === filter.id;
-                return (
-                  <button
-                    key={filter.id}
-                    type="button"
-                    onClick={() => chooseQuickFilter(filter.id)}
-                    className={`inline-flex min-h-11 items-center gap-2 rounded-md border px-3 py-2 text-sm font-black uppercase leading-tight transition ${
-                      active
-                        ? "border-tomato bg-tomato text-white"
-                        : "border-charcoal/15 bg-white text-charcoal hover:border-tomato hover:text-tomato"
-                    }`}
-                    aria-pressed={active}
-                  >
-                    <Icon name={filter.icon} className="h-4 w-4" />
-                    {filter.label}
-                  </button>
-                );
-              })}
+                <button
+                  type="button"
+                  onClick={() => cyclePage(1)}
+                  disabled={totalPages <= 1}
+                  className="tap-target inline-flex items-center justify-center rounded-md border-2 border-ocean bg-white text-ocean transition hover:bg-ocean hover:text-white"
+                  aria-label="Next products"
+                >
+                  <Icon name="ChevronRight" className="h-7 w-7" />
+                </button>
+              </div>
             </div>
-          </div>
 
-          {normalizedQuery ||
-          quickFilter !== "all" ||
-          activeCategoryId !== "all" ||
-          activeGroupFilter !== "all" ? (
-            <button
-              type="button"
-              onClick={resetMenuFilters}
-              className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-md border border-charcoal/15 bg-ivory px-4 py-2 text-base font-black text-charcoal transition hover:border-ocean hover:text-ocean"
-            >
-              <Icon name="RotateCcw" className="h-5 w-5" />
-              Clear menu filters
-            </button>
-          ) : null}
-        </div>
+            {visibleItems.length ? (
+              <motion.div layout className={`mt-8 ${visibleItems.length === 1 ? 'flex justify-center' : 'grid gap-6 md:grid-cols-2 lg:grid-cols-3'}`}>
+                <AnimatePresence>
+                  {visibleItems.map((item) => (
+                    <div key={`${item.category}-${item.name}`} className={visibleItems.length === 1 ? 'w-full max-w-md' : 'w-full'}>
+                      <MenuCard
+                        item={item}
+                        onAdd={onAdd}
+                        onInspect={onItemOpen}
+                        customizationChoices={customizationChoices}
+                      />
+                    </div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            ) : (
+              <div className="mt-8 rounded-lg border border-charcoal/10 bg-white p-8 text-center shadow-soft">
+                <Icon name="SearchX" className="mx-auto h-10 w-10 text-ocean" />
+                <h3 className="mt-4 text-2xl font-black text-charcoal">No menu items found.</h3>
+                <p className="mx-auto mt-2 max-w-xl text-lg leading-relaxed text-charcoal/70">
+                  Try a broader search or clear the current category and style filters.
+                </p>
+                <ButtonAction onClick={resetMenuFilters} variant="dark" className="mt-5">
+                  <Icon name="RotateCcw" />
+                  Clear Filters
+                </ButtonAction>
+              </div>
+            )}
 
-        <div ref={resultsRef} className="mt-12 scroll-mt-28 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-          <div>
-            <h3 className="font-sans text-[2.15rem] font-black uppercase leading-none text-charcoal sm:text-3xl md:text-4xl">
-              {activeHeading}
-            </h3>
-            <p className="mt-3 text-xl font-bold leading-snug text-charcoal/65 sm:text-lg">{resultsLabel}</p>
-          </div>
-          <div className="hidden gap-3 sm:flex">
-            <button
-              type="button"
-              onClick={() => cyclePage(-1)}
-              disabled={totalPages <= 1}
-              className="tap-target inline-flex items-center justify-center rounded-md border-2 border-ocean bg-white text-ocean transition hover:bg-ocean hover:text-white"
-              aria-label="Previous products"
-            >
-              <Icon name="ChevronLeft" className="h-7 w-7" />
-            </button>
-            <button
-              type="button"
-              onClick={() => cyclePage(1)}
-              disabled={totalPages <= 1}
-              className="tap-target inline-flex items-center justify-center rounded-md border-2 border-ocean bg-white text-ocean transition hover:bg-ocean hover:text-white"
-              aria-label="Next products"
-            >
-              <Icon name="ChevronRight" className="h-7 w-7" />
-            </button>
-          </div>
-        </div>
-
-        {visibleItems.length ? (
-          <motion.div layout className={`mt-8 ${visibleItems.length === 1 ? 'flex justify-center' : 'grid gap-6 md:grid-cols-2 lg:grid-cols-3'}`}>
-            <AnimatePresence>
-              {visibleItems.map((item) => (
-                <div key={`${item.category}-${item.name}`} className={visibleItems.length === 1 ? 'w-full max-w-md' : 'w-full'}>
-                  <MenuCard
-                    item={item}
-                    onAdd={onAdd}
-                    onInspect={onItemOpen}
-                    customizationChoices={customizationChoices}
+            {totalPages > 1 ? (
+              <div className="mt-6 flex items-center justify-center gap-2">
+                {Array.from({ length: totalPages }).map((_, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    onClick={() => setPage(index)}
+                    className={`h-3 rounded-full transition ${
+                      safePage === index ? "w-9 bg-ocean" : "w-3 bg-charcoal/25"
+                    }`}
+                    aria-label={`Show product page ${index + 1}`}
                   />
-                </div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
-        ) : (
-          <div className="mt-8 rounded-lg border border-charcoal/10 bg-white p-8 text-center shadow-soft">
-            <Icon name="SearchX" className="mx-auto h-10 w-10 text-ocean" />
-            <h3 className="mt-4 text-2xl font-black text-charcoal">No menu items found.</h3>
-            <p className="mx-auto mt-2 max-w-xl text-lg leading-relaxed text-charcoal/70">
-              Try a broader search or clear the current category and style filters.
-            </p>
-            <ButtonAction onClick={resetMenuFilters} variant="dark" className="mt-5">
-              <Icon name="RotateCcw" />
-              Clear Filters
-            </ButtonAction>
-          </div>
-        )}
-
-        {totalPages > 1 ? (
-          <div className="mt-6 flex items-center justify-center gap-2">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                onClick={() => setPage(index)}
-                className={`h-3 rounded-full transition ${
-                  safePage === index ? "w-9 bg-ocean" : "w-3 bg-charcoal/25"
-                }`}
-                aria-label={`Show product page ${index + 1}`}
-              />
-            ))}
-          </div>
+                ))}
+              </div>
+            ) : null}
+          </>
         ) : null}
       </div>
     </motion.section>
@@ -2508,6 +2324,43 @@ function LocationContact({
   );
 }
 
+function HomeSectionNav({ activeTab, onNavigate }) {
+  return (
+    <div className="section-shell pt-6 sm:pt-8">
+      <nav
+        aria-label="South Pizza sections"
+        className="flex max-w-full snap-x gap-2 overflow-x-auto rounded-lg border border-white/15 bg-charcoal/95 p-2 shadow-[0_18px_45px_rgba(7,10,18,0.2)] backdrop-blur sm:flex-wrap sm:overflow-visible"
+      >
+        {navLinks.map((link) => {
+          const tabId = tabIdFromHref(link.href);
+          const active = tabId ? activeTab === tabId : false;
+          const iconName = sectionNavIcons[link.href] || "Circle";
+
+          return (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(event) => onNavigate(event, link)}
+              className={`group inline-flex min-h-12 shrink-0 snap-start items-center justify-center gap-2 rounded-md border px-4 py-2 text-base font-black leading-tight transition sm:px-5 ${
+                active
+                  ? "border-ocean bg-ocean text-white shadow-[0_10px_24px_rgba(33,110,130,0.34)]"
+                  : "border-white/10 bg-white/[0.08] text-white/86 hover:border-ocean/70 hover:bg-white/[0.14] hover:text-white"
+              }`}
+              aria-current={active ? "page" : undefined}
+            >
+              <Icon
+                name={iconName}
+                className={`h-5 w-5 transition ${active ? "text-white" : "text-sand/90 group-hover:text-white"}`}
+              />
+              <span>{link.label}</span>
+            </a>
+          );
+        })}
+      </nav>
+    </div>
+  );
+}
+
 function CompactHomeTabs({
   activeTab,
   onTabChange,
@@ -2550,6 +2403,28 @@ function CompactHomeTabs({
     }
   }, [activeTab, onTabChange, safeActiveTab]);
 
+  function handleSectionNav(event, link) {
+    if (!link.href.startsWith("#")) {
+      return;
+    }
+
+    event.preventDefault();
+    const tabId = tabIdFromHref(link.href);
+
+    if (tabId) {
+      onTabChange(tabId);
+      return;
+    }
+
+    if (link.href === "#visit") {
+      window.history.replaceState(null, "", link.href);
+      document.getElementById("visit")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   function renderActiveTab() {
     switch (safeActiveTab) {
       case "specials":
@@ -2583,66 +2458,13 @@ function CompactHomeTabs({
     }
   }
 
-  function chooseHomeTab(tabId) {
-    onTabChange(tabId, { scroll: false });
-    window.setTimeout(() => {
-      document.getElementById(`homepage-panel-${tabId}`)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }, 80);
-  }
-
   return (
-    <section id="explore" className="bg-ivory py-8 sm:py-10">
-      <div className="section-shell">
-        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-          <div>
-            <p className="section-kicker">{hero?.tabKicker || heroContent.tabKicker}</p>
-            <h2 className="mt-2 max-w-3xl font-sans text-[2rem] font-black uppercase leading-tight text-charcoal sm:text-4xl">
-              {hero?.tabHeadline || heroContent.tabHeadline}
-            </h2>
-          </div>
-          <ButtonAction onClick={onOrderClick} variant="dark" className="lg:shrink-0">
-            <Icon name="ShoppingBag" />
-            Start Order
-          </ButtonAction>
-        </div>
-
-        <div
-          className="mt-6 flex snap-x gap-2 overflow-x-auto rounded-lg border border-charcoal/10 bg-white p-2 shadow-soft"
-          role="tablist"
-          aria-label="Homepage sections"
-        >
-          {visibleTabs.map((tab) => {
-            const active = safeActiveTab === tab.id;
-
-            return (
-              <button
-                key={tab.id}
-                type="button"
-                role="tab"
-                aria-selected={active}
-                aria-controls={`homepage-panel-${tab.id}`}
-                onClick={() => chooseHomeTab(tab.id)}
-                className={`inline-flex min-h-12 shrink-0 snap-start items-center gap-2 rounded-md px-4 py-2 text-base font-black transition ${
-                  active
-                    ? "bg-ocean text-white shadow-sm"
-                    : "text-charcoal hover:bg-surf hover:text-ocean"
-                }`}
-              >
-                <Icon name={tab.icon} className="h-5 w-5" />
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
+    <section id="explore" className="bg-ivory">
+      <HomeSectionNav activeTab={safeActiveTab} onNavigate={handleSectionNav} />
       <div
         id={`homepage-panel-${safeActiveTab}`}
         role="tabpanel"
-        className="mt-4 scroll-mt-28"
+        className="scroll-mt-28"
       >
         {renderActiveTab()}
       </div>

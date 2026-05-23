@@ -89,6 +89,59 @@ body::before {
   -webkit-backdrop-filter: blur(18px) saturate(155%);
 }
 
+.header-hot-deals-animate {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: rgba(200, 75, 55, 0.74) !important;
+  animation: header-hot-deals-pulse 2.4s ease-in-out infinite;
+}
+
+.header-hot-deals-animate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.46), transparent),
+    linear-gradient(135deg, rgba(200, 75, 55, 0.28), rgba(33, 110, 130, 0.16));
+  mix-blend-mode: screen;
+  opacity: 0.62;
+  transform: translateX(-120%);
+  animation: header-hot-deals-shine 3.2s ease-in-out infinite;
+}
+
+@keyframes header-hot-deals-pulse {
+  0%,
+  100% {
+    filter: brightness(1) saturate(1);
+  }
+
+  50% {
+    filter: brightness(1.16) saturate(1.12);
+  }
+}
+
+@keyframes header-hot-deals-shine {
+  0%,
+  38% {
+    transform: translateX(-120%);
+  }
+
+  68%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-hot-deals-animate,
+  .header-hot-deals-animate::before {
+    animation: none;
+  }
+}
+
 main {
   background: transparent;
 }
